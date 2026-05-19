@@ -1,0 +1,45 @@
+{
+  "name": "Hugo Congo Enterprise Marketing Hub Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/hugo:1": {
+      "version": "0.161.0",
+      "extended": true
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "1.22"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.associations": {
+          "*.html": "html",
+          "*.css": "css"
+        },
+        "git.autofetch": true,
+        "git.confirmSync": false
+      },
+      "extensions": [
+        "koichik.vscode-hugo-helper",
+        "budparr.bep-hugo-vscode",
+        "golang.go"
+      ]
+    }
+  },
+  "forwardPorts": [1313, 8081],
+  "portsAttributes": {
+    "1313": {
+      "label": "Congo 9-Language LivePreview",
+      "onAutoForward": "openBrowser"
+    },
+    "8081": {
+      "label": "Sveltia CMS Core Proxy Service",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "npm init -y && npm install -D decap-cms-proxy-server npm-run-all && echo 'alias hugo-branch-server=\"hugo server --appendPort=false --bind=0.0.0.0 --baseURL=https://${CODESPACE_NAME}-1313.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"' >> ~/.bashrc"
+}
