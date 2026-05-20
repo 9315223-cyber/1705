@@ -1,0 +1,212 @@
+baseURL = "http://localhost:1313/"
+timeout = "45s"
+
+# Головні мовні налаштування для багатомовності
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Налаштування безпеки для роботи в GitHub Codespaces
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^postcss$', '^node$', '^npm$']
+  [security.funcs]
+    getenv = ['^CODESPACE_NAME$', '^GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN$']
+
+# --- НАЛАШТУВАННЯ МОВ ---
+
+[languages.en]
+  locale = "en-US"
+  label = "English"
+  title = "Congo Enterprise Marketing Hub"
+  weight = 1
+
+[languages.uk]
+  locale = "uk-UA"
+  label = "Українська"
+  title = "Маркетинговий Хаб Congo"
+  weight = 2
+
+[languages.de]
+  locale = "de-DE"
+  label = "Deutsch"
+  title = "Congo Enterprise Marketing Hub (DE)"
+  weight = 3
+
+[languages.fr]
+  locale = "fr-FR"
+  label = "Français"
+  title = "Congo Enterprise Marketing Hub (FR)"
+  weight = 4
+
+[languages.es]
+  locale = "es-ES"
+  label = "Español"
+  title = "Congo Enterprise Marketing Hub (ES)"
+  weight = 5
+
+[languages.ru]
+  locale = "ru-RU"
+  label = "Русский"
+  title = "Маркетинговый Хаб Congo"
+  weight = 6
+
+[languages.zh]
+  locale = "zh-CN"
+  label = "中文"
+  title = "Congo 企业 mkt 中心"
+  weight = 7
+
+[languages.tr]
+  locale = "tr-TR"
+  label = "Türkçe"
+  title = "Congo Enterprise Marketing Hub (TR)"
+  weight = 8
+
+[languages.ga]
+  locale = "ga-IE"
+  label = "Gaeilge"
+  title = "Congo Enterprise Marketing Hub (GA)"
+  weight = 9
+
+# --- НАЛАШТУВАННЯ МЕНЮ ДЛЯ КОЖНОЇ МОВИ ---
+
+[[languages.en.menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+[[languages.en.menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.uk.menu.main]]
+  name = "Головна"
+  pageRef = "/"
+  weight = 10
+[[languages.uk.menu.main]]
+  name = "Блог"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.de.menu.main]]
+  name = "Startseite"
+  pageRef = "/"
+  weight = 10
+[[languages.de.menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.fr.menu.main]]
+  name = "Accueil"
+  pageRef = "/"
+  weight = 10
+[[languages.fr.menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.es.menu.main]]
+  name = "Inicio"
+  pageRef = "/"
+  weight = 10
+[[languages.es.menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.ru.menu.main]]
+  name = "Главная"
+  pageRef = "/"
+  weight = 10
+[[languages.ru.menu.main]]
+  name = "Блог"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.zh.menu.main]]
+  name = "首页"
+  pageRef = "/"
+  weight = 10
+[[languages.zh.menu.main]]
+  name = "博客"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.tr.menu.main]]
+  name = "Anasayfa"
+  pageRef = "/"
+  weight = 10
+[[languages.tr.menu.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.ga.menu.main]]
+  name = "Baile"
+  pageRef = "/"
+  weight = 10
+[[languages.ga.menu.main]]
+  name = "Blag"
+  pageRef = "/posts"
+  weight = 20
+
+# --- ПАРАМЕТРИ ТЕМИ CONGO (ВМИКАЄМО ГЛОБУС ТА СУЧАСНОГО АВТОРА) ---
+
+[languages.en.params]
+  [languages.en.params.author]
+    name = "Marketing Hub"
+  [languages.en.params.header]
+    showLanguageChooser = true
+
+[languages.uk.params]
+  [languages.uk.params.author]
+    name = "Маркетинговий Хаб"
+  [languages.uk.params.header]
+    showLanguageChooser = true
+
+[languages.de.params]
+  [languages.de.params.author]
+    name = "Marketing Hub"
+  [languages.de.params.header]
+    showLanguageChooser = true
+
+[languages.fr.params]
+  [languages.fr.params.author]
+    name = "Marketing Hub"
+  [languages.fr.params.header]
+    showLanguageChooser = true
+
+[languages.es.params]
+  [languages.es.params.author]
+    name = "Marketing Hub"
+  [languages.es.params.header]
+    showLanguageChooser = true
+
+[languages.ru.params]
+  [languages.ru.params.author]
+    name = "Маркетинговый Хаб"
+  [languages.ru.params.header]
+    showLanguageChooser = true
+
+[languages.zh.params]
+  [languages.zh.params.author]
+    name = "Marketing Hub"
+  [languages.zh.params.header]
+    showLanguageChooser = true
+
+[languages.tr.params]
+  [languages.tr.params.author]
+    name = "Marketing Hub"
+  [languages.tr.params.header]
+    showLanguageChooser = true
+
+[languages.ga.params]
+  [languages.ga.params.author]
+    name = "Marketing Hub"
+  [languages.ga.params.header]
+    showLanguageChooser = true
+    

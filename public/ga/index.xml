@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Enterprise Hub Landing on </title>
-    <link>http://localhost:1313/ga/</link>
-    <description>Recent content in Enterprise Hub Landing on </description>
+    <title>Congo Enterprise Marketing Hub (GA)</title>
+    <link>https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ga/</link>
+    <description>Recent content on Congo Enterprise Marketing Hub (GA)</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/ga/index.xml" rel="self" type="application/rss+xml" />
+    <language>ga-IE</language>
+    <atom:link href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ga/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
