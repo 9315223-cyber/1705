@@ -41,5 +41,5 @@
       "onAutoForward": "silent"
     }
   },
-  "postCreateCommand": "npm init -y && npm install -D decap-cms-proxy-server npm-run-all && echo 'alias hugo-branch-server=\"hugo server --appendPort=false --bind=0.0.0.0 --baseURL=https://${CODESPACE_NAME}-1313.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"' >> ~/.bashrc"
+  "postCreateCommand": "npm init -y && npm install -D decap-cms-proxy-server npm-run-all && python3 setup_master.py --auto && python3 error_fixer_core.py && echo 'alias hugo-branch-server=\"hugo server --appendPort=false --bind=0.0.0.0 --baseURL=https://${CODESPACE_NAME}-1313.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\"' >> ~/.bashrc"
 }

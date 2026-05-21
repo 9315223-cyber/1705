@@ -1,0 +1,30 @@
+baseURL = "http://localhost:1313/"
+timeout = "45s"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/jpanther/congo/v2"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^postcss$', '^node$', '^npm$']
+  [security.funcs]
+    getenv = ['^CODESPACE_NAME$', '^GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN$']
+
+[imaging]
+    resizerFilter = "box"
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+    filename = "sitemap.xml"

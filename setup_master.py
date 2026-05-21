@@ -195,7 +195,16 @@ def generate_audit_report():
         print(f"\n{G}📝 Звіт успішно записано у файл: {report_path}{W}")
     except Exception as e:
         print(f"   {R}❌ Не вдалося згенерувати звіт: {str(e)}{W}")
-
+# Додайте цей фрагмент у ваш setup_master.py
+def enforce_config_isolation():
+    path = "config/_default/config.toml"
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+            if "[params]" in content:
+                print(f"{R}КРИТИЧНА ПОМИЛКА: [params] виявлено в config.toml!{W}")
+                print(f"Це викликає конфлікт. Перенесіть [params] у params.toml та видаліть їх з config.toml.")
+                sys.exit(1) # Зупиняємо скрипт
 def main():
     print_header()
     domain, repo, ga4_id, ads_id = run_interactive_wizard()

@@ -7,7 +7,20 @@ def print_status(component, status, message):
     print(f"{colors.get(status, '[INFO]')} {component.ljust(30)}: {message}")
 
 print("\033[95m=== STARTING ADVANCED INFRASTRUCTURE DIAGNOSIS ===\033[0m\n")
-
+# --- ВСТАВТЕ ЦЮ ФУНКЦІЮ СЮДИ ---
+def check_for_duplicate_tables():
+    files = ["config/_default/config.toml", "config/_default/params.toml"]
+    found_params = 0
+    for file in files:
+        if os.path.exists(file):
+            with open(file, "r", encoding="utf-8") as f:
+                if "[params]" in f.read():
+                    found_params += 1
+    
+    if found_params > 1:
+        print_status("Config Isolation", "ERROR", "Блок [params] знайдено в кількох файлах! Hugo не завантажиться.")
+    else:
+        print_status("Config Isolation", "OK", "Конфігурація розділена коректно.")
 # 1. Перевірка тем і модулів
 if os.path.exists("themes"):
     print_status("Physical Themes Folder", "ERROR", "Знайдено папку themes! Вона конфліктує з Go Modules.")
@@ -25,6 +38,7 @@ if os.path.exists(config_path):
         print_status("Config Author Field", "OK", "Старих полів автора в корені не знайдено.")
 else:
     print_status("Core Config", "ERROR", f"Файл {config_path} відсутній!")
+check_for_duplicate_tables()
 
 # 3. Перевірка контенту для мовних версій
 languages = ['uk', 'en', 'de', 'zh', 'ru', 'fr', 'ga', 'tr', 'es']
@@ -45,6 +59,8 @@ result = subprocess.run(["hugo", "--gc"], capture_output=True, text=True)
 
 if result.returncode != 0:
     print_status("Hugo Site Build", "ERROR", "Hugo не зміг зібрати сайт.")
+    print("\n\033[91m[ДЕТАЛІ ПОМИЛКИ HUGO]:\033[0m")
+    print(result.stderr)
     if "warnings.html" in result.stderr and ".Author" in result.stderr:
         print("\033[91m[ДІАГНОЗ ШІ]: Підтверджено конфлікт Hugo v0.161 і шаблону warnings.html теми Congo.\033[0m")
 else:

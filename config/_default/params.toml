@@ -1,0 +1,21 @@
+[params]
+color = "blue"
+font = "sans"
+logo = "logo.png"
+homepage = "posts"
+
+[params.meta]
+robots = "index, follow"
+
+[params.social]
+twitter = "marketing_hub"
+github = "congo-hub"
+linkedin = "company/marketing-hub"
+
+[params.header]
+showLanguageChooser = true
+showSearch = true
+
+[params.footer]
+showCopyright = true
+showPoweredBy = true
