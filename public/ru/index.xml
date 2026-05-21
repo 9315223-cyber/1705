@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Маркетинговый Хаб Congo</title>
-    <link>/ru/</link>
+    <link>https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ru/</link>
     <description>Recent content on Маркетинговый Хаб Congo</description>
     <generator>Hugo</generator>
     <language>ru-RU</language>
-    <atom:link href="/ru/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ru/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

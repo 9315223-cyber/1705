@@ -1,127 +1,162 @@
-# --- CONFIGURATION: languages.toml ---
-
-[languages.en]
+[en]
   languageName = "English"
   locale = "en-US"
   title = "Congo Enterprise Marketing Hub"
   weight = 1
-  [languages.en.params]
+  [en.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "blue"
-  [[languages.en.menu.main]]
-    name = "Home"; pageRef = "/"; weight = 10
-  [[languages.en.menu.main]]
-    name = "Blog"; pageRef = "/posts"; weight = 20
+  [[en.menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[en.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.uk]
+[uk]
   languageName = "Українська"
   locale = "uk-UA"
   title = "Маркетинговий Хаб Congo"
   weight = 2
-  [languages.uk.params]
+  [uk.params]
     author = { name = "Маркетинговий Хаб" }
     header = { showLanguageChooser = true }
     color = "yellow"
-  [[languages.uk.menu.main]]
-    name = "Головна"; pageRef = "/"; weight = 10
-  [[languages.uk.menu.main]]
-    name = "Блог"; pageRef = "/posts"; weight = 20
+  [[uk.menu.main]]
+    name = "Головна"
+    pageRef = "/"
+    weight = 10
+  [[uk.menu.main]]
+    name = "Блог"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.de]
+[de]
   languageName = "Deutsch"
   locale = "de-DE"
   title = "Congo Enterprise Marketing Hub (DE)"
   weight = 3
-  [languages.de.params]
+  [de.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "slate"
-  [[languages.de.menu.main]]
-    name = "Startseite"; pageRef = "/"; weight = 10
-  [[languages.de.menu.main]]
-    name = "Blog"; pageRef = "/posts"; weight = 20
+  [[de.menu.main]]
+    name = "Startseite"
+    pageRef = "/"
+    weight = 10
+  [[de.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.fr]
+[fr]
   languageName = "Français"
   locale = "fr-FR"
   title = "Congo Enterprise Marketing Hub (FR)"
   weight = 4
-  [languages.fr.params]
+  [fr.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "blue"
-  [[languages.fr.menu.main]]
-    name = "Accueil"; pageRef = "/"; weight = 10
-  [[languages.fr.menu.main]]
-    name = "Blog"; pageRef = "/posts"; weight = 20
+  [[fr.menu.main]]
+    name = "Accueil"
+    pageRef = "/"
+    weight = 10
+  [[fr.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.es]
+[es]
   languageName = "Español"
   locale = "es-ES"
   title = "Congo Enterprise Marketing Hub (ES)"
   weight = 5
-  [languages.es.params]
+  [es.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "orange"
-  [[languages.es.menu.main]]
-    name = "Inicio"; pageRef = "/"; weight = 10
-  [[languages.es.menu.main]]
-    name = "Blog"; pageRef = "/posts"; weight = 20
+  [[es.menu.main]]
+    name = "Inicio"
+    pageRef = "/"
+    weight = 10
+  [[es.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.ru]
+[ru]
   languageName = "Русский"
   locale = "ru-RU"
   title = "Маркетинговый Хаб Congo"
   weight = 6
-  [languages.ru.params]
+  [ru.params]
     author = { name = "Маркетинговый Хаб" }
     header = { showLanguageChooser = true }
     color = "red"
-  [[languages.ru.menu.main]]
-    name = "Главная"; pageRef = "/"; weight = 10
-  [[languages.ru.menu.main]]
-    name = "Блог"; pageRef = "/posts"; weight = 20
+  [[ru.menu.main]]
+    name = "Главная"
+    pageRef = "/"
+    weight = 10
+  [[ru.menu.main]]
+    name = "Блог"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.zh]
+[zh]
   languageName = "中文"
   locale = "zh-CN"
   title = "Congo 企业 mkt 中心"
   weight = 7
-  [languages.zh.params]
+  [zh.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "emerald"
-  [[languages.zh.menu.main]]
-    name = "首页"; pageRef = "/"; weight = 10
-  [[languages.zh.menu.main]]
-    name = "博客"; pageRef = "/posts"; weight = 20
+  [[zh.menu.main]]
+    name = "首页"
+    pageRef = "/"
+    weight = 10
+  [[zh.menu.main]]
+    name = "博客"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.tr]
+[tr]
   languageName = "Türkçe"
   locale = "tr-TR"
   title = "Congo Enterprise Marketing Hub (TR)"
   weight = 8
-  [languages.tr.params]
+  [tr.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "orange"
-  [[languages.tr.menu.main]]
-    name = "Anasayfa"; pageRef = "/"; weight = 10
-  [[languages.tr.menu.main]]
-    name = "Blog"; pageRef = "/posts"; weight = 20
+  [[tr.menu.main]]
+    name = "Anasayfa"
+    pageRef = "/"
+    weight = 10
+  [[tr.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
 
-[languages.ga]
+[ga]
   languageName = "Gaeilge"
   locale = "ga-IE"
   title = "Congo Enterprise Marketing Hub (GA)"
   weight = 9
-  [languages.ga.params]
+  [ga.params]
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "green"
-  [[languages.ga.menu.main]]
-    name = "Baile"; pageRef = "/"; weight = 10
-  [[languages.ga.menu.main]]
-    name = "Blag"; pageRef = "/posts"; weight = 20
+  [[ga.menu.main]]
+    name = "Baile"
+    pageRef = "/"
+    weight = 10
+  [[ga.menu.main]]
+    name = "Blag"
+    pageRef = "/posts"
+    weight = 20
+    

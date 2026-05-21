@@ -20,6 +20,24 @@ def print_header():
     print(f"{G}💥  MASTER SETUP: АВТОМАТИЧНА КОНФІГУРАЦІЯ ТА САНАЦІЯ ІНФРАСТРУКТУРИ  💥{W}")
     print(f"{G}===================================================================={W}\n")
 
+def verify_sveltia_environment():
+    print(f"\n{B}🔧 Перевірка Sveltia CMS Proxy...{W}")
+    if not os.path.exists("node_modules"):
+        print(f"{Y}Виявлено відсутність node_modules. Ініціалізація...{W}")
+        # Ініціалізуємо npm та встановлюємо проксі
+        os.system("npm init -y && npm install @sveltia/cms-proxy-server --save-dev")
+    print(f"{G}✅ Середовище Sveltia готове.{W}")
+
+def enforce_config_isolation():
+    path = "config/_default/config.toml"
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+            if "[params]" in content:
+                print(f"{R}КРИТИЧНА ПОМИЛКА: [params] виявлено в config.toml!{W}")
+                print(f"Це викликає конфлікт. Перенесіть [params] у params.toml та видаліть їх з config.toml.")
+                sys.exit(1) # Зупиняємо скрипт
+
 def run_interactive_wizard():
     print(f"{B}[ІНТЕРАКТИВНИЙ ДІАГНОСТИЧНИЙ МАЙСТЕР]{W}\nБудь ласка, введіть реальні параметри продуктового середовища:\n")
     
@@ -39,7 +57,7 @@ def run_interactive_wizard():
 def patch_infrastructure_routes(domain, repo, ga4_id, ads_id):
     print(f"\n{Y}🔄 Модуль 1: Запуск глибокого сканування файлів та глобального перезапису маршрутів...{W}")
     
-    # Матриця точних патчів для усунення синтаксичних і логічних помилок первинного проектування
+    # Матриця точних патчів для усунення синтаксичних і логічних помилок
     replacements = [
         ("https://pages.dev", f"https://{domain}"),
         ("username/your-hugo-enterprise-repo", repo),
@@ -47,7 +65,7 @@ def patch_infrastructure_routes(domain, repo, ga4_id, ads_id):
         ("G-XXXXXXXXXX", ga4_id),
         ("AW-YYYYYYYYYY", ads_id),
         ("AW-000000000", ads_id),
-        ("://microsoft.com", "mcr.microsoft.com/devcontainers/base:ubuntu"), # Фікс образу Docker контейнера
+        ("://microsoft.com", "mcr.microsoft.com/devcontainers/base:ubuntu"), 
     ]
     
     updated_files_count = 0
@@ -108,7 +126,7 @@ def run_self_healing_engine(ads_id):
         lang_posts_dir = os.path.join("content", lang, "posts")
         os.makedirs(lang_posts_dir, exist_ok=True)
         
-    # 2. Автоматична генерація та наповнення критичних Markdown-компонентів для захисту CI/CD від падінь
+    # 2. Автоматична генерація шаблонів
     enterprise_front_matter_template = """---
 title: "Enterprise Hub Landing"
 date: 2026-05-19T12:00:00+02:00
@@ -195,21 +213,17 @@ def generate_audit_report():
         print(f"\n{G}📝 Звіт успішно записано у файл: {report_path}{W}")
     except Exception as e:
         print(f"   {R}❌ Не вдалося згенерувати звіт: {str(e)}{W}")
-# Додайте цей фрагмент у ваш setup_master.py
-def enforce_config_isolation():
-    path = "config/_default/config.toml"
-    if os.path.exists(path):
-        with open(path, "r", encoding="utf-8") as f:
-            content = f.read()
-            if "[params]" in content:
-                print(f"{R}КРИТИЧНА ПОМИЛКА: [params] виявлено в config.toml!{W}")
-                print(f"Це викликає конфлікт. Перенесіть [params] у params.toml та видаліть їх з config.toml.")
-                sys.exit(1) # Зупиняємо скрипт
+
 def main():
+    # 1. Запуск середовища та перевірок
+    verify_sveltia_environment()
+    enforce_config_isolation()
+    
+    # 2. Запуск майстра
     print_header()
     domain, repo, ga4_id, ads_id = run_interactive_wizard()
     
-    # Послідовний запуск інженерних вузлів автоматизації
+    # 3. Послідовний запуск інженерних вузлів автоматизації
     patch_infrastructure_routes(domain, repo, ga4_id, ads_id)
     run_self_healing_engine(ads_id)
     run_cross_fixer_media()
