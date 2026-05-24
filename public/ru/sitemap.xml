@@ -3,62 +3,113 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
-  
-    
-  
-    
-  
-    
       <url>
-            <loc>https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ru/</loc>
-            <changefreq>weekly</changefreq>
-            <priority>0.5</priority>
+            <loc>//:1313/ru/</loc>
+            <lastmod>2026-05-19T12:00:00+02:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/en/"
+              href="//:1313/en/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="uk"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/uk/"
+              href="//:1313/uk/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="de"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/de/"
+              href="//:1313/de/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="fr"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/fr/"
+              href="//:1313/fr/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/es/"
+              href="//:1313/es/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="zh"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/zh/"
+              href="//:1313/zh/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="tr"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/tr/"
+              href="//:1313/tr/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ga"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ga/"
+              href="//:1313/ga/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ru"
-              href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/ru/"
+              href="//:1313/ru/"
               />
           </url>
+    
+  
+    
+      <url>
+            <loc>//:1313/ru/posts/</loc>
+            <lastmod>2026-05-19T12:00:00+02:00</lastmod>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="//:1313/en/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="uk"
+              href="//:1313/uk/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="//:1313/de/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="fr"
+              href="//:1313/fr/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="es"
+              href="//:1313/es/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="zh"
+              href="//:1313/zh/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="tr"
+              href="//:1313/tr/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="ga"
+              href="//:1313/ga/posts/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="ru"
+              href="//:1313/ru/posts/"
+              />
+          </url>
+    
+  
+    
+  
+    
+  
     
   
 </urlset>

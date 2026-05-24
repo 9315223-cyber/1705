@@ -1,7 +1,13 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://your-domain.pages.dev/" # Тимчасовий домен Cloudflare
+languageCode = "en-us"
+title = "Congo Enterprise Marketing Hub"
 timeout = "45s"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
+
+# КРИТИЧНІ НАЛАШТУВАННЯ ДЛЯ SEO 100/100
+relativeURLs = false    # ПРИМУСОВО ВИМИКАЄМО: для коректних hreflang
+canonifyURLs = true     # ПРИМУСОВО ВМИКАЄМО: робимо всі посилання абсолютними
 
 [module]
   [[module.imports]]
@@ -14,17 +20,3 @@ defaultContentLanguageInSubdir = true
   category = "categories"
   tag = "tags"
   series = "series"
-
-[security]
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^postcss$', '^node$', '^npm$']
-  [security.funcs]
-    getenv = ['^CODESPACE_NAME$', '^GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN$']
-
-[imaging]
-  resizerFilter = "box"
-
-[sitemap]
-  changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"

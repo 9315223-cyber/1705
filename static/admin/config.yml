@@ -1,84 +1,30 @@
 # =====================================================================
-# ENTERPRISE MARKETING HUB — SVELTIA CMS FULL CONFIGURATION
+# SVELTIA CMS — CLOUDFLARE & CODESPACES OPTIMIZED CONFIG
 # =====================================================================
 backend:
-  name: git-gateway
+  name: github
+  repo: 9315223-cyber/1705
   branch: main
+# ВАЖЛИВО: local_backend видалено, Sveltia використовує іншу логіку для локальної роботи
+# site_url та display_url залишаємо порожніми, щоб вони автоматично 
+# адаптувалися під Codespaces або Cloudflare Pages
+site_url: ""
+display_url: ""
 
-# Увімкнення локального емулятора для GitHub Codespaces
-local_backend: true
-
-# Налаштування медіа-бібліотеки
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# Базові налаштування відображення для Sveltia
-site_url: "https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev"
-display_url: "https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev"
-
-# Повноцінна інтеграція з 9-мовною матрицею Congo Enterprise
 i18n:
   structure: multiple_folders
   locales: [en, uk, de, fr, es, ru, zh, tr, ga]
   default_locale: en
 
 collections:
-  # -----------------------------------------------------------------
-  # КОЛЕКЦІЯ 1: Блог / Пости (Динамічний контент)
-  # -----------------------------------------------------------------
   - name: "posts"
     label: "Блог / Пости"
-    label_singular: "Пост"
     folder: "content/{{locale}}/posts"
     create: true
-    slug: "{{slug}}"
-    summary: "{{title}} ({{date}})"
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Дата публікації", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
-      - { label: "Короткий опис", name: "summary", widget: "text", required: false }
-      - { label: "SEO Опис", name: "description", widget: "string", required: false }
-      - { label: "Текст посту", name: "body", widget: "markdown" }
-      - { label: "Чернетка", name: "draft", widget: "boolean", default: false }
-      - { label: "Показувати дату", name: "showDate", widget: "boolean", default: true }
-      - { label: "Показувати час читання", name: "showReadTime", widget: "boolean", default: true }
-      - { label: "Теги", name: "tags", widget: "list", required: false }
-
-  # -----------------------------------------------------------------
-  # КОЛЕКЦІЯ 2: Сторінки (Статичний контент)
-  # -----------------------------------------------------------------
-  - name: "pages"
-    label: "Статичні Сторінки"
-    label_singular: "Сторінка"
-    folder: "content/{{locale}}"
-    create: true
-    filter: { field: "layout", value: "page" }
-    slug: "{{slug}}"
-    fields:
-      - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Текст сторінки", name: "body", widget: "markdown" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Чернетка", name: "draft", widget: "boolean", default: false }
-
-  # -----------------------------------------------------------------
-  # КОЛЕКЦІЯ 3: Автори (Специфіка Congo)
-  # -----------------------------------------------------------------
-  - name: "authors"
-    label: "Профілі Авторів"
-    label_singular: "Автор"
-    folder: "content/{{locale}}/authors"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ім'я", name: "title", widget: "string" }
-      - { label: "Біографія", name: "body", widget: "markdown", required: false }
-      - { label: "Соціальні посилання", name: "links", widget: "list", required: false, fields: [
-          { label: "Платформа", name: "icon", widget: "string" },
-          { label: "Посилання", name: "link", widget: "string" }
-        ]}
-
-# Додаткові налаштування Sveltia для кращого досвіду
-ui:
-  content_density: compact
-  scroll_to_top: true
-  
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Текст", name: "body", widget: "markdown" }

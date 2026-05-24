@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Congo Enterprise Marketing Hub</title>
-    <link>https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/en/categories/</link>
+    <link>//:1313/en/categories/</link>
     <description>Recent content in Categories on Congo Enterprise Marketing Hub</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//:1313/en/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

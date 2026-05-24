@@ -1,5 +1,6 @@
 [en]
   languageName = "English"
+  contentDir = "content/en"   # ІЗОЛЯЦІЯ: Англійська
   locale = "en-US"
   title = "Congo Enterprise Marketing Hub"
   weight = 1
@@ -7,17 +8,10 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "blue"
-  [[en.menu.main]]
-    name = "Home"
-    pageRef = "/"
-    weight = 10
-  [[en.menu.main]]
-    name = "Blog"
-    pageRef = "/posts"
-    weight = 20
 
 [uk]
   languageName = "Українська"
+  contentDir = "content/uk"  # ІЗОЛЯЦІЯ: Українська
   locale = "uk-UA"
   title = "Маркетинговий Хаб Congo"
   weight = 2
@@ -25,17 +19,10 @@
     author = { name = "Маркетинговий Хаб" }
     header = { showLanguageChooser = true }
     color = "yellow"
-  [[uk.menu.main]]
-    name = "Головна"
-    pageRef = "/"
-    weight = 10
-  [[uk.menu.main]]
-    name = "Блог"
-    pageRef = "/posts"
-    weight = 20
 
 [de]
   languageName = "Deutsch"
+  contentDir = "content/de"  # ДОДАНО contentDir
   locale = "de-DE"
   title = "Congo Enterprise Marketing Hub (DE)"
   weight = 3
@@ -43,17 +30,10 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "slate"
-  [[de.menu.main]]
-    name = "Startseite"
-    pageRef = "/"
-    weight = 10
-  [[de.menu.main]]
-    name = "Blog"
-    pageRef = "/posts"
-    weight = 20
 
 [fr]
   languageName = "Français"
+  contentDir = "content/fr"  # ДОДАНО contentDir
   locale = "fr-FR"
   title = "Congo Enterprise Marketing Hub (FR)"
   weight = 4
@@ -61,17 +41,10 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "blue"
-  [[fr.menu.main]]
-    name = "Accueil"
-    pageRef = "/"
-    weight = 10
-  [[fr.menu.main]]
-    name = "Blog"
-    pageRef = "/posts"
-    weight = 20
 
 [es]
   languageName = "Español"
+  contentDir = "content/es"  # ДОДАНО contentDir
   locale = "es-ES"
   title = "Congo Enterprise Marketing Hub (ES)"
   weight = 5
@@ -79,35 +52,21 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "orange"
-  [[es.menu.main]]
-    name = "Inicio"
-    pageRef = "/"
-    weight = 10
-  [[es.menu.main]]
-    name = "Blog"
-    pageRef = "/posts"
-    weight = 20
 
 [ru]
   languageName = "Русский"
+  contentDir = "content/ru"  # ДОДАНО contentDir
   locale = "ru-RU"
-  title = "Маркетинговый Хаб Congo"
+  title = "Маркетинговий Хаб Congo"
   weight = 6
   [ru.params]
-    author = { name = "Маркетинговый Хаб" }
+    author = { name = "Маркетинговий Хаб" }
     header = { showLanguageChooser = true }
     color = "red"
-  [[ru.menu.main]]
-    name = "Главная"
-    pageRef = "/"
-    weight = 10
-  [[ru.menu.main]]
-    name = "Блог"
-    pageRef = "/posts"
-    weight = 20
 
 [zh]
   languageName = "中文"
+  contentDir = "content/zh"  # ДОДАНО contentDir
   locale = "zh-CN"
   title = "Congo 企业 mkt 中心"
   weight = 7
@@ -115,17 +74,10 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "emerald"
-  [[zh.menu.main]]
-    name = "首页"
-    pageRef = "/"
-    weight = 10
-  [[zh.menu.main]]
-    name = "博客"
-    pageRef = "/posts"
-    weight = 20
 
 [tr]
   languageName = "Türkçe"
+  contentDir = "content/tr"  # ДОДАНО contentDir
   locale = "tr-TR"
   title = "Congo Enterprise Marketing Hub (TR)"
   weight = 8
@@ -133,17 +85,10 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "orange"
-  [[tr.menu.main]]
-    name = "Anasayfa"
-    pageRef = "/"
-    weight = 10
-  [[tr.menu.main]]
-    name = "Blog"
-    pageRef = "/posts"
-    weight = 20
 
 [ga]
   languageName = "Gaeilge"
+  contentDir = "content/ga"  # ДОДАНО contentDir
   locale = "ga-IE"
   title = "Congo Enterprise Marketing Hub (GA)"
   weight = 9
@@ -151,12 +96,3 @@
     author = { name = "Marketing Hub" }
     header = { showLanguageChooser = true }
     color = "green"
-  [[ga.menu.main]]
-    name = "Baile"
-    pageRef = "/"
-    weight = 10
-  [[ga.menu.main]]
-    name = "Blag"
-    pageRef = "/posts"
-    weight = 20
-    
