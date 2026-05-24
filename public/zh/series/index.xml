@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Congo 企业 mkt 中心</title>
-    <link>//:1313/zh/series/</link>
+    <link>https://your-domain.pages.dev/zh/series/</link>
     <description>Recent content in Series on Congo 企业 mkt 中心</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <atom:link href="//:1313/zh/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://your-domain.pages.dev/zh/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

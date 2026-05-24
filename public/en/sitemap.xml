@@ -4,104 +4,104 @@
   
     
       <url>
-            <loc>//:1313/en/</loc>
+            <loc>https://your-domain.pages.dev/en/</loc>
             <lastmod>2026-05-19T12:00:00+02:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="uk"
-              href="//:1313/uk/"
+              href="https://your-domain.pages.dev/uk/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="de"
-              href="//:1313/de/"
+              href="https://your-domain.pages.dev/de/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="fr"
-              href="//:1313/fr/"
+              href="https://your-domain.pages.dev/fr/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="//:1313/es/"
+              href="https://your-domain.pages.dev/es/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ru"
-              href="//:1313/ru/"
+              href="https://your-domain.pages.dev/ru/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="zh"
-              href="//:1313/zh/"
+              href="https://your-domain.pages.dev/zh/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="tr"
-              href="//:1313/tr/"
+              href="https://your-domain.pages.dev/tr/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ga"
-              href="//:1313/ga/"
+              href="https://your-domain.pages.dev/ga/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="//:1313/en/"
+              href="https://your-domain.pages.dev/en/"
               />
           </url>
     
   
     
       <url>
-            <loc>//:1313/en/posts/</loc>
+            <loc>https://your-domain.pages.dev/en/posts/</loc>
             <lastmod>2026-05-19T12:00:00+02:00</lastmod>
             <xhtml:link
               rel="alternate"
               hreflang="uk"
-              href="//:1313/uk/posts/"
+              href="https://your-domain.pages.dev/uk/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="de"
-              href="//:1313/de/posts/"
+              href="https://your-domain.pages.dev/de/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="fr"
-              href="//:1313/fr/posts/"
+              href="https://your-domain.pages.dev/fr/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="es"
-              href="//:1313/es/posts/"
+              href="https://your-domain.pages.dev/es/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ru"
-              href="//:1313/ru/posts/"
+              href="https://your-domain.pages.dev/ru/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="zh"
-              href="//:1313/zh/posts/"
+              href="https://your-domain.pages.dev/zh/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="tr"
-              href="//:1313/tr/posts/"
+              href="https://your-domain.pages.dev/tr/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ga"
-              href="//:1313/ga/posts/"
+              href="https://your-domain.pages.dev/ga/posts/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="//:1313/en/posts/"
+              href="https://your-domain.pages.dev/en/posts/"
               />
           </url>
     

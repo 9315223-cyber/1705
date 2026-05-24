@@ -1,0 +1,14 @@
+# =====================================================================
+# CONGO ENTERPRISE — GLOBAL ROBOTS POLICY (static/robots.txt)
+# =====================================================================
+
+User-agent: *
+# Блокуємо доступ до адмін-панелі для всіх
+Disallow: /admin/
+
+# Посилання на карту сайту для Google/Bing/DuckDuckGo
+Sitemap: https://your-domain.pages.dev/sitemap.xml
+
+# Спеціальна вказівка на політику щодо ШІ (Синхронізація)
+# Це повідомляє чесним ботам про наявність додаткових обмежень
+X-AI-Policy: https://your-domain.pages.dev/ai.txt 

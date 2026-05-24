@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Маркетинговий Хаб Congo</title>
-    <link>//:1313/uk/tags/</link>
+    <link>https://your-domain.pages.dev/uk/tags/</link>
     <description>Recent content in Tags on Маркетинговий Хаб Congo</description>
     <generator>Hugo</generator>
     <language>uk-UA</language>
-    <atom:link href="//:1313/uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://your-domain.pages.dev/uk/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

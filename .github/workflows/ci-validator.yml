@@ -1,0 +1,45 @@
+# =====================================================================
+# CONGO ENTERPRISE — CI/CD VALIDATOR & LIGHTHOUSE AUDITOR
+# =====================================================================
+name: "Infrastructure Validator (Lighthouse 100/100)"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🚚 Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: "🏗️ Setup Hugo Extended (0.161.0)"
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.161.0'
+          extended: true
+
+      - name: "🧪 Build Site for Audit"
+        run: hugo --gc --minify
+
+      - name: "🚀 Run Lighthouse Audit"
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://localhost:1313/en/
+            http://localhost:1313/uk/
+          configPath: './.lighthouserc.json' # Конфіг порогів (створимо далі)
+          uploadArtifacts: true # Збереження звітів у разі помилки
+          temporaryPublicStorage: true # Посилання на HTML-звіт для аналізу
+
+      - name: "🛠️ Run Python Diagnostics"
+        run: |
+          python3 diagnose.py
+          python3 audit_collector.py
+          

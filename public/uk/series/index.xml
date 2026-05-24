@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Маркетинговий Хаб Congo</title>
-    <link>//:1313/uk/series/</link>
+    <link>https://your-domain.pages.dev/uk/series/</link>
     <description>Recent content in Series on Маркетинговий Хаб Congo</description>
     <generator>Hugo</generator>
     <language>uk-UA</language>
-    <atom:link href="//:1313/uk/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://your-domain.pages.dev/uk/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

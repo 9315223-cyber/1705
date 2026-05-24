@@ -1,13 +1,11 @@
-baseURL = "https://your-domain.pages.dev/" # Тимчасовий домен Cloudflare
+baseURL = "https://cyber-hub-1705.pages.dev/"
+relativeURLs = false
+canonifyURLs = true
 languageCode = "en-us"
-title = "Congo Enterprise Marketing Hub"
+title = "My Project"
 timeout = "45s"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-
-# КРИТИЧНІ НАЛАШТУВАННЯ ДЛЯ SEO 100/100
-relativeURLs = false    # ПРИМУСОВО ВИМИКАЄМО: для коректних hreflang
-canonifyURLs = true     # ПРИМУСОВО ВМИКАЄМО: робимо всі посилання абсолютними
 
 [module]
   [[module.imports]]
@@ -20,3 +18,4 @@ canonifyURLs = true     # ПРИМУСОВО ВМИКАЄМО: робимо вс
   category = "categories"
   tag = "tags"
   series = "series"
+  

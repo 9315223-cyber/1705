@@ -1,0 +1,137 @@
+# =====================================================================
+# CONGO ENTERPRISE — GLOBAL NAVIGATION MATRIX (9 LANGUAGES)
+# =====================================================================
+
+# 🇬🇧 ENGLISH
+[[en]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+[[en]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+[[en]]
+  name = "About"
+  pageRef = "/about"
+  weight = 30
+[[en]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 40
+
+# 🇺🇦 UKRAINIAN
+[[uk]]
+  name = "Головна"
+  pageRef = "/"
+  weight = 10
+[[uk]]
+  name = "Блог"
+  pageRef = "/posts"
+  weight = 20
+[[uk]]
+  name = "Про нас"
+  pageRef = "/about"
+  weight = 30
+[[uk]]
+  name = "Контакти"
+  pageRef = "/contact"
+  weight = 40
+
+# 🇩🇪 GERMAN
+[[de]]
+  name = "Startseite"
+  pageRef = "/"
+  weight = 10
+[[de]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+[[de]]
+  name = "Über uns"
+  pageRef = "/about"
+  weight = 30
+
+# 🇫🇷 FRENCH
+[[fr]]
+  name = "Accueil"
+  pageRef = "/"
+  weight = 10
+[[fr]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+[[fr]]
+  name = "À propos"
+  pageRef = "/about"
+  weight = 30
+
+# 🇪🇸 SPANISH
+[[es]]
+  name = "Inicio"
+  pageRef = "/"
+  weight = 10
+[[es]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+[[es]]
+  name = "Contacto"
+  pageRef = "/contact"
+  weight = 30
+
+# 🇷🇺 RUSSIAN
+[[ru]]
+  name = "Главная"
+  pageRef = "/"
+  weight = 10
+[[ru]]
+  name = "Блог"
+  pageRef = "/posts"
+  weight = 20
+[[ru]]
+  name = "Контакты"
+  pageRef = "/contact"
+  weight = 30
+
+# 🇨🇳 CHINESE
+[[zh]]
+  name = "首页"
+  pageRef = "/"
+  weight = 10
+[[zh]]
+  name = "博客"
+  pageRef = "/posts"
+  weight = 20
+[[zh]]
+  name = "联系我们"
+  pageRef = "/contact"
+  weight = 30
+
+# 🇹🇷 TURKISH
+[[tr]]
+  name = "Anasayfa"
+  pageRef = "/"
+  weight = 10
+[[tr]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 20
+[[tr]]
+  name = "İletişim"
+  pageRef = "/contact"
+  weight = 30
+
+# 🇮🇪 IRISH
+[[ga]]
+  name = "Baile"
+  pageRef = "/"
+  weight = 10
+[[ga]]
+  name = "Blag"
+  pageRef = "/posts"
+  weight = 20
+[[ga]]
+  name = "Teagmháil"
+  pageRef = "/contact"
+  weight = 30

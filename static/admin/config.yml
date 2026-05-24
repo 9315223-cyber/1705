@@ -5,26 +5,49 @@ backend:
   name: github
   repo: 9315223-cyber/1705
   branch: main
-# ВАЖЛИВО: local_backend видалено, Sveltia використовує іншу логіку для локальної роботи
-# site_url та display_url залишаємо порожніми, щоб вони автоматично 
-# адаптувалися під Codespaces або Cloudflare Pages
+
+# Динамічні URL: дозволяють працювати і в хмарі, і на продакшні
 site_url: ""
 display_url: ""
 
+# Медіа-бібліотека
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
+# Матриця 9 мов (Ізоляція папок)
 i18n:
   structure: multiple_folders
   locales: [en, uk, de, fr, es, ru, zh, tr, ga]
   default_locale: en
 
 collections:
+  # Колекція Постів
   - name: "posts"
     label: "Блог / Пости"
+    label_singular: "Пост"
     folder: "content/{{locale}}/posts"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Дата публікації", name: "date", widget: "datetime" }
+      - { label: "Текст посту", name: "body", widget: "markdown" }
+      - { label: "SEO Опис", name: "description", widget: "string", required: false }
+      - { label: "Чернетка", name: "draft", widget: "boolean", default: false }
+
+  # Колекція Сторінок
+  - name: "pages"
+    label: "Статичні Сторінки"
+    folder: "content/{{locale}}"
+    create: true
+    filter: { field: "layout", value: "page" }
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
       - { label: "Текст", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+
+# Оптимізація інтерфейсу
+ui:
+  content_density: compact
+  scroll_to_top: true
+  

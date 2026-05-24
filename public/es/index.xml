@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Enterprise Hub Landing on Congo Enterprise Marketing Hub (ES)</title>
-    <link>//:1313/es/</link>
+    <link>https://your-domain.pages.dev/es/</link>
     <description>Recent content in Enterprise Hub Landing on Congo Enterprise Marketing Hub (ES)</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//:1313/es/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://your-domain.pages.dev/es/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

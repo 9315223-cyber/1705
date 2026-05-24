@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Congo Enterprise Marketing Hub (GA)</title>
-    <link>//:1313/ga/series/</link>
+    <link>https://your-domain.pages.dev/ga/series/</link>
     <description>Recent content in Series on Congo Enterprise Marketing Hub (GA)</description>
     <generator>Hugo</generator>
     <language>ga-IE</language>
-    <atom:link href="//:1313/ga/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://your-domain.pages.dev/ga/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

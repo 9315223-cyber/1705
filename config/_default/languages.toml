@@ -1,6 +1,11 @@
+# =====================================================================
+# CONGO ENTERPRISE — MULTILINGUAL MATRIX (FIX: NESTING BUG)
+# =====================================================================
+
 [en]
+  contentDir = "content/en"
   languageName = "English"
-  contentDir = "content/en"   # ІЗОЛЯЦІЯ: Англійська
+  contentDir = "content/en" # ІЗОЛЯЦІЯ: Англійська
   locale = "en-US"
   title = "Congo Enterprise Marketing Hub"
   weight = 1
@@ -10,8 +15,9 @@
     color = "blue"
 
 [uk]
+  contentDir = "content/uk"
   languageName = "Українська"
-  contentDir = "content/uk"  # ІЗОЛЯЦІЯ: Українська
+  contentDir = "content/uk" # ІЗОЛЯЦІЯ: Українська
   locale = "uk-UA"
   title = "Маркетинговий Хаб Congo"
   weight = 2
@@ -21,78 +27,71 @@
     color = "yellow"
 
 [de]
+  contentDir = "content/de"
   languageName = "Deutsch"
-  contentDir = "content/de"  # ДОДАНО contentDir
+  contentDir = "content/de" # ІЗОЛЯЦІЯ: Німецька
   locale = "de-DE"
-  title = "Congo Enterprise Marketing Hub (DE)"
+  title = "Congo Enterprise Hub (DE)"
   weight = 3
   [de.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "slate"
 
 [fr]
+  contentDir = "content/fr"
   languageName = "Français"
-  contentDir = "content/fr"  # ДОДАНО contentDir
+  contentDir = "content/fr" # ІЗОЛЯЦІЯ: Французька
   locale = "fr-FR"
-  title = "Congo Enterprise Marketing Hub (FR)"
+  title = "Congo Enterprise Hub (FR)"
   weight = 4
   [fr.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "blue"
 
 [es]
+  contentDir = "content/es"
   languageName = "Español"
-  contentDir = "content/es"  # ДОДАНО contentDir
+  contentDir = "content/es" # ІЗОЛЯЦІЯ: Іспанська
   locale = "es-ES"
-  title = "Congo Enterprise Marketing Hub (ES)"
+  title = "Congo Enterprise Hub (ES)"
   weight = 5
   [es.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "orange"
 
 [ru]
+  contentDir = "content/ru"
   languageName = "Русский"
-  contentDir = "content/ru"  # ДОДАНО contentDir
+  contentDir = "content/ru" # ІЗОЛЯЦІЯ: Російська
   locale = "ru-RU"
   title = "Маркетинговий Хаб Congo"
   weight = 6
   [ru.params]
-    author = { name = "Маркетинговий Хаб" }
-    header = { showLanguageChooser = true }
     color = "red"
 
 [zh]
+  contentDir = "content/zh"
   languageName = "中文"
-  contentDir = "content/zh"  # ДОДАНО contentDir
+  contentDir = "content/zh" # ІЗОЛЯЦІЯ: Китайська
   locale = "zh-CN"
   title = "Congo 企业 mkt 中心"
   weight = 7
   [zh.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "emerald"
 
 [tr]
+  contentDir = "content/tr"
   languageName = "Türkçe"
-  contentDir = "content/tr"  # ДОДАНО contentDir
+  contentDir = "content/tr" # ІЗОЛЯЦІЯ: Турецька
   locale = "tr-TR"
-  title = "Congo Enterprise Marketing Hub (TR)"
+  title = "Congo Enterprise Hub (TR)"
   weight = 8
   [tr.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "orange"
 
 [ga]
+  contentDir = "content/ga"
   languageName = "Gaeilge"
-  contentDir = "content/ga"  # ДОДАНО contentDir
+  contentDir = "content/ga" # ІЗОЛЯЦІЯ: Ірландська
   locale = "ga-IE"
-  title = "Congo Enterprise Marketing Hub (GA)"
+  title = "Congo Enterprise Hub (GA)"
   weight = 9
   [ga.params]
-    author = { name = "Marketing Hub" }
-    header = { showLanguageChooser = true }
     color = "green"
