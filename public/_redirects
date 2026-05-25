@@ -1,13 +1,9 @@
-# Автоматичний редірект на основі мови браузера користувача на Edge-рівні
-/  /uk/  302  Language=uk
-/  /de/  302  Language=de
-/  /zh/  302  Language=zh
-/  /fr/  302  Language=fr
-/  /ru/  302  Language=ru
-/  /ga/  302  Language=ga
-/  /tr/  302  Language=tr
-/  /es/  302  Language=es
-/  /en/  302
-
-# Запасне правило для всіх інших локацій
+/  /uk/  302  Country=ua
+/  /de/  302  Country=de
+/  /fr/  302  Country=fr
+/  /es/  302  Country=es
+/  /zh/  302  Country=cn
+/  /tr/  302  Country=tr
+/  /ga/  302  Country=ie
+/  /ru/  302  Country=ru
 /  /en/  301

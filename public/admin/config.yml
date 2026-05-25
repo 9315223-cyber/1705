@@ -1,18 +1,13 @@
-# =====================================================================
-# SVELTIA CMS — CLOUDFLARE & CODESPACES OPTIMIZED CONFIG
-# =====================================================================
 backend:
   name: github
   repo: 9315223-cyber/1705
   branch: main
-# ВАЖЛИВО: local_backend видалено, Sveltia використовує іншу логіку для локальної роботи
-# site_url та display_url залишаємо порожніми, щоб вони автоматично 
-# адаптувалися під Codespaces або Cloudflare Pages
-site_url: ""
-display_url: ""
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
+
+site_url: ""
+display_url: ""
 
 i18n:
   structure: multiple_folders

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Блог та Статті on Congo Enterprise Marketing Hub (ES)</title>
-    <link>https://your-domain.pages.dev/es/posts/</link>
-    <description>Recent content in Блог та Статті on Congo Enterprise Marketing Hub (ES)</description>
+    <title>Блог та Статті on Congo Enterprise Hub</title>
+    <link>https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/es/posts/</link>
+    <description>Recent content in Блог та Статті on Congo Enterprise Hub</description>
     <generator>Hugo</generator>
-    <language>es-ES</language>
+    <language>es</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://your-domain.pages.dev/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reimagined-pancake-r4j5q6ww44v4f4jv-1313.app.github.dev/es/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

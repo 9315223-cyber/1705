@@ -1,58 +1,65 @@
 /* =====================================================================
-   CONGO ENTERPRISE — CUSTOM CSS CORE (LIGHTHOUSE 100/100 OPTIMIZED)
-   ФАЙЛ 6: Кастомні CSS-ін'єкції поверх Tailwind [1]
+   CONGO ENTERPRISE — CUSTOM CSS CORE
    ===================================================================== */
 
-/* 1. ГЛОБАЛЬНІ НАЛАШТУВАННЯ ДЛЯ LIGHTHOUSE PERFORMANCE */
+/* 1. GLOBAL */
 html {
-    scroll-behavior: smooth; /* Плавна навігація без JS */
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2. МУЛЬТИМОВНА ОПТИМІЗАЦІЯ ФОНТІВ (9 МОВ) [4, 5] */
-/* Гарантуємо читабельність для кирилиці (UK, RU) та ієрогліфів (ZH) */
+/* 2. MULTILANGUAGE */
 :lang(zh) {
     font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
     line-height: 1.8;
 }
 
-:lang(uk), :lang(ru) {
+:lang(uk),
+:lang(ru) {
     font-variant-ligatures: common-ligatures;
 }
 
-/* 3. СТИЛІ ДЛЯ "САЙТУ-ВІЗИТКИ" (ENTERPRISE BRANDING) [2] */
-.business-card-gradient {
-    @apply bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900;
+/* 3. TAILWIND COMPONENTS */
+@layer components {
+
+    .business-card-gradient {
+        @apply bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900;
+    }
+
+    .cms-preview-wrapper img {
+        @apply rounded-lg shadow-md max-w-full h-auto;
+    }
+
+    .prose a {
+        @apply decoration-blue-500/30 hover:decoration-blue-500 transition-colors duration-300;
+    }
 }
 
-/* Кастомний стиль для Hero-секції маркетингового хабу */
+/* 4. HERO EFFECT */
 .hero-text-glow {
     text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-    @apply dark:text-shadow-none;
 }
 
-/* 4. ОПТИМІЗАЦІЯ ДЛЯ ШІ-СКРЕПЕРІВ (GEO & UX) [6, 7] */
-/* Приховуємо технічні метадані від звичайних користувачів, але залишаємо для ШІ-агентів */
+/* DARK MODE FIX */
+.dark .hero-text-glow {
+    text-shadow: none;
+}
+
+/* 5. AI METADATA */
 .ai-metadata-hidden {
     display: none;
-    visibility: hidden;
 }
 
-/* 5. ВИПРАВЛЕННЯ ДЛЯ SVELTIA CMS PREVIEW [8, 9] */
-/* Забезпечуємо коректне відображення Markdown-редактора в адмінці */
-.cms-preview-wrapper img {
-    @apply rounded-lg shadow-md max-w-full h-auto;
-    content-visibility: auto; /* Оптимізація рендерингу Lighthouse */
+/* 6. PERFORMANCE */
+@supports (content-visibility: auto) {
+    .cms-preview-wrapper img {
+        content-visibility: auto;
+    }
 }
 
-/* 6. АКЦЕНТИ ДЛЯ МОДЕРНОГО БЛОГУ [2] */
-.prose a {
-    @apply decoration-blue-500/30 hover:decoration-blue-500 transition-all duration-300;
+/* 7. CLS FIX */
+img[loading="lazy"] {
+    height: auto;
+    background-color: #f3f4f6;
 }
-
-/* Прибираємо "скачки" при завантаженні (CLS Fix) */
-img[lazy] {
-    aspect-ratio: attr(width) / attr(height);
-    background-color: #f3f4f6; }
-    

@@ -1,11 +1,15 @@
 baseURL = "https://cyber-hub-1705.pages.dev/"
-relativeURLs = false
-canonifyURLs = true
-languageCode = "en-us"
-title = "My Project"
-timeout = "45s"
-defaultContentLanguage = "en"
+title = "Congo Enterprise Hub"
+timeout = "60s"
+
+# СИНХРОНІЗАЦІЯ ДЕФОЛТІВ (Україна — головне серце хабу)
+languageCode = "uk-ua"
+defaultContentLanguage = "uk"
 defaultContentLanguageInSubdir = true
+
+# КРИТИЧНО ДЛЯ LIGHTHOUSE 100/100 ТА СТАБІЛЬНОСТІ CODESPACES
+relativeURLs = false
+canonifyURLs = false
 
 [module]
   [[module.imports]]

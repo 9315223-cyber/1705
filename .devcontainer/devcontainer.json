@@ -1,19 +1,19 @@
 {
-	"name": "Congo Enterprise Hub (Hugo + Sveltia)",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"budparr.hugo-vscode",
-				"redhat.vscode-yaml",
-				"mechatroner.rainbow-csv",
-				"esbenp.prettier-vscode"
-			]
-		}
-	},
-	"forwardPorts": ,
-	"postCreateCommand": "npm install && go mod tidy",
-	"remoteUser": "vscode"
+    "name": "Congo Enterprise Hub (Hugo + Sveltia)",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "budparr.hugo-vscode",
+                "redhat.vscode-yaml",
+                "mechatroner.rainbow-csv",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [1313, 8081],
+    "postCreateCommand": "npm install && go mod tidy",
+    "remoteUser": "vscode"
 }

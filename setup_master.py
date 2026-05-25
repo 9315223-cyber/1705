@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import os
 import re
 
-# Колірна палітра
-G, Y, R, B, P, W = "\033[92m", "\033[93m", "\033[91m", "\033[94m", "\033[95m", "\033[0m"
+# Колірна палітра для звіту
+G, Y, R, B, W = "\033[92m", "\033[93m", "\033[91m", "\033[94m", "\033[0m"
 
 def update_file(path, pattern, replacement):
     if os.path.exists(path):
@@ -16,49 +14,39 @@ def update_file(path, pattern, replacement):
         return True
     return False
 
-def main():
-    print(f"\n{P}===================================================================={W}")
-    print(f"{P}💥  MASTER SETUP v4.0: GEO-SECURITY & SELF-HEALING ENGINE        💥{W}")
-    print(f"{P}===================================================================={W}")
+def setup():
+    print(f"\n{G}💥 MASTER SETUP v5.0: INFRASTRUCTURE REPAIR & LLM OPTIMIZATION 💥{W}\n")
 
-    # 1. ЗАПИТ ДАНИХ
-    domain = input(f"{B}Введіть домен (напр. enterprise-hub.pages.dev): {W}") or "enterprise-hub.pages.dev"
+    domain = "cyber-hub-1705.pages.dev"
     repo = "9315223-cyber/1705"
 
-    # 2. ОПТИМІЗАЦІЯ SEO ТА ЯДРА
-    print(f"{Y}🔄 Оптимізація config.toml та SEO...{W}")
-    cfg = "config/_default/config.toml"
-    update_file(cfg, r'^baseURL = .*', f'baseURL = "https://{domain}/"')
-    update_file(cfg, r'^relativeURLs = .*', 'relativeURLs = false')
-    update_file(cfg, r'^canonifyURLs = .*', 'canonifyURLs = true')
-
-    # 3. ЛІКУВАННЯ NESTING BUG ТА ЛІНКУВАННЯ 9 МОВ
-    print(f"{Y}🔄 Ізоляція 9 мовних потоків...{W}")
-    langs = ['en', 'uk', 'de', 'fr', 'es', 'ru', 'zh', 'tr', 'ga']
-    lang_file = "config/_default/languages.toml"
-    for l in langs:
-        update_file(lang_file, rf'\[{l}\]\n(?!.*contentDir)', f'[{l}]\n  contentDir = "content/{l}"\n')
-        os.makedirs(f"content/{l}/posts", exist_ok=True)
-        idx = f"content/{l}/_index.md"
-        if not os.path.exists(idx):
-            with open(idx, "w", encoding='utf-8') as f:
-                f.write(f'---\ntitle: "Enterprise Hub {l.upper()}"\nlayout: "page"\n---')
-
-    # 4. ВПРОВАДЖЕННЯ llms.txt (GEO Оптимізація)
-    print(f"{Y}🔄 Створення маніфесту llms.txt для ШІ...{W}")
+    # 1. Створення/Оновлення static/llms.txt (згідно з стандартами Cloudflare)
+    print(f"{B}🔧 Генерація маніфесту llms.txt...{W}")
     with open("static/llms.txt", "w", encoding='utf-8') as f:
-        f.write(f"# Congo Enterprise Hub\n\n## Context\nOptimized for AI discovery 2026.\n\n## Repository\n{repo}")
+        f.write(f"# Congo Enterprise Hub\n\n## Context\nHigh-performance multilingual marketing hub.\n\n## Language Matrix\n/en/, /uk/, /de/, /fr/, /es/, /ru/, /zh/, /tr/, /ga/")
 
-    # 5. САНАЦІЯ SVELTIA CMS
-    print(f"{Y}🔄 Очищення Sveltia CMS від хардкоду Codespaces...{W}")
-    cms_cfg = "static/admin/config.yml"
-    update_file(cms_cfg, r'^  repo: .*', f'  repo: {repo}')
-    update_file(cms_cfg, r'^site_url: .*', 'site_url: ""')
-    update_file(cms_cfg, r'^display_url: .*', 'display_url: ""')
+    # 2. Виправлення помилки в _middleware.ts (видалення PagesFunction типів)
+    print(f"{B}🔧 Виправлення захисного щита Edge Functions...{W}")
+    os.makedirs("functions", exist_ok=True)
+    with open("functions/_middleware.ts", "w", encoding='utf-8') as f:
+        f.write("export async function onRequest(context) {\n"
+                "  const ua = (context.request.headers.get('user-agent') || '').toLowerCase();\n"
+                "  const blocked = ['gptbot', 'chatgpt-user', 'bytespider', 'claudebot'];\n"
+                "  if (blocked.some(bot => ua.includes(bot))) return new Response('Forbidden', {status: 403});\n"
+                "  return await context.next();\n}")
 
-    print(f"\n{G}🚀 УСПІХ: Вся інфраструктура синхронізована та захищена!{W}")
-    print(f"{B}Тепер ваш сайт повністю відповідає Ідеальній Структурі.{W}\n")
+    # 3. Санація Sveltia CMS (Видалення хардкоду Codespaces)
+    update_file("static/admin/config.yml", r'^  repo: .*', f'  repo: {repo}')
+    update_file("static/admin/config.yml", r'^site_url: .*', f'site_url: "https://{domain}"')
+
+    # 4. Лікування Nesting Bug (Ізоляція 9 мов)
+    lang_cfg = "config/_default/languages.toml"
+    langs = ['en', 'uk', 'de', 'fr', 'es', 'ru', 'zh', 'tr', 'ga']
+    for l in langs:
+        update_file(lang_cfg, rf'\[{l}\]\n(?!.*contentDir)', f'[{l}]\n  contentDir = "content/{l}"\n')
+
+    print(f"\n{G}🚀 УСПІХ: Помилки в _middleware виправлено, інфраструктура готова!{W}")
 
 if __name__ == "__main__":
-    main()
+    setup()
     
