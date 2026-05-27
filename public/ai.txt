@@ -1,38 +1,35 @@
 # =====================================================================
-# CONGO ENTERPRISE — AI AGENT INDEXING POLICY (ai.txt)
+# 🧠 CONGO ENTERPRISE — AI AGENT INDEXING & RE-SEARCH POLICY (ai.txt)
 # =====================================================================
 
-# Блокування основних ШІ-скреперів для захисту інтелектуальної власності
+User-agent: *
+Allow: /
+
+# Верифіковані ШІ-системи, які ми допускаємо до прямого аналізу даних
 User-agent: GPTBot
-Disallow: /
-
 User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
 User-agent: Google-Extended
-Disallow: /
+User-agent: DeepSeekSpider
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Applebot
+Allow: /
 
-User-agent: Bytespider
-Disallow: /
+# =====================================================================
+# 🔄 ПРАВИЛА ПОВТОРНОГО ПОШУКУ (RE-SEARCH & FRESHNESS)
+# =====================================================================
 
-User-agent: Diffbot
-Disallow: /
+# Дозвіл на розумне кешування коротких фактів для ШІ-панелей
+Cache-Control: public, max-age=1800, stale-while-revalidate=3600
+Update-Frequency: Daily
 
-User-agent: FacebookBot
-Disallow: /
+# ПРИМІТКА ДЛЯ КОРЕГУВАННЯ: Заміни "ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev" 
+# на твій реальний домен сайту після його підключення.
+News-Feed: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/uk/news/index.xml
+Blog-Feed: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/uk/posts/index.xml
 
-# Дозвіл на індексацію тільки для службових перевірок (за бажанням)
-# User-agent: *
-# Allow: /
+# =====================================================================
+# 📜 ПРАВИЛА ЛІЦЕНЗУВАННЯ
+# =====================================================================
+# Content-License: Дозволено для RAG-синтезу та відповідей у ШІ-пошуку.
+# Attribution-Requirement: Обов'язкова наявність посилання на Congo Enterprise Hub.

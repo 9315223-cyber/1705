@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: 9315223-cyber/1705
-  branch: main
+  repo: 9315223-cyber/1705  # Тут має бути саме ваша назва репозиторію 
+  branch: main             
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -15,11 +15,35 @@ i18n:
   default_locale: en
 
 collections:
+  # =====================================================================
+  # 📝 КОЛЕКЦІЯ 1: БЛОГ / ПОСТИ / НАУКОВІ МАТЕРІАЛИ
+  # =====================================================================
   - name: "posts"
     label: "Блог / Пости"
     folder: "content/{{locale}}/posts"
     create: true
     fields:
-      - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Дата", name: "date", widget: "datetime" }
-      - { label: "Текст", name: "body", widget: "markdown" }
+      - { label: "Заголовок статті (H1)", name: "title", widget: "string" }
+      - { label: "Дата публікації", name: "date", widget: "datetime" }
+      - { label: "Ім'я Автора (Вимога Google E-E-A-T)", name: "author", widget: "string", default: "Enterprise Hub Expert" }
+      - { label: "Короткий опис для класичного SEO (Meta Description)", name: "description", widget: "string" }
+      - { label: "Стислий концентрат факту для ШІ та SLM-панелей", name: "summary_ai", widget: "string" }
+      - { label: "Ключові слова для ШІ-асоціацій (через кому)", name: "keywords_ai", widget: "string" }
+      - { label: "Унікальний ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
+      - { label: "Текст статті (Markdown)", name: "body", widget: "markdown" }
+
+  # =====================================================================
+  # 📰 КОЛЕКЦІЯ 2: АВТОМАТИЧНА СТРІЧКА НОВИН (Генератор RSS для ботів)
+  # =====================================================================
+  - name: "news"
+    label: "Стрічка новин"
+    folder: "content/{{locale}}/news"
+    create: true
+    fields:
+      - { label: "Заголовок новини", name: "title", widget: "string" }
+      - { label: "Дата релізу", name: "date", widget: "datetime" }
+      - { label: "Джерело/Організація релізу", name: "publisher", widget: "string", default: "Congo Enterprise Hub" }
+      - { label: "Короткий виклад новини для швидких відповідей ChatGPT/DeepSeek", name: "description", widget: "string" }
+      - { label: "Локація події (Місто, Країна)", name: "location_geo", widget: "string", default: "Sigmaringen, Germany" }
+      - { label: "Унікальний ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
+      - { label: "Текст новини", name: "body", widget: "markdown" }

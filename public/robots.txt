@@ -1,14 +1,97 @@
 # =====================================================================
-# CONGO ENTERPRISE — GLOBAL ROBOTS POLICY (static/robots.txt)
+# 🌐 CONGO ENTERPRISE HUB — PROFESSIONAL ROBOTS & SECURITY POLICY (2026)
 # =====================================================================
 
 User-agent: *
-# Блокуємо доступ до адмін-панелі для всіх
 Disallow: /admin/
+Disallow: /core/
+Disallow: /config/
+Disallow: /private/
+Allow: /
 
-# Посилання на карту сайту для Google/Bing/DuckDuckGo
-Sitemap: https://your-domain.pages.dev/sitemap.xml
+# ---------------------------------------------------------------------
+# 🗺️ КАРТИ САЙТУ ТА ПРОТОКОЛИ МИТТЄВОГО ОНОВЛЕННЯ (ПРИМІТКА: ЗМІНИ ДОМЕН)
+# ---------------------------------------------------------------------
+# ПРИМІТКА ДЛЯ КОРЕГУВАННЯ: Коли дізнаєшся точний домен, заміни 
+# "ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev" на свою реальну адресу (наприклад, site.com)
 
-# Спеціальна вказівка на політику щодо ШІ (Синхронізація)
-# Це повідомляє чесним ботам про наявність додаткових обмежень
-X-AI-Policy: https://your-domain.pages.dev/ai.txt 
+Sitemap: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/sitemap.xml
+X-AI-Policy: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/ai.txt
+IndexNow: https://api.indexnow.org/
+
+# =====================================================================
+# 🚫 БЛОК БЕЗПЕКИ: АНТИХАКЕР, АНТИСПАМ ТА ЗАХИСТ ВІД ЗЛАМУ
+# =====================================================================
+User-agent: sqlmap
+User-agent: dirbuster
+User-agent: nmap
+User-agent: nikto
+User-agent: wpscan
+User-agent: acunetix
+User-agent: Hydra
+User-agent: ZmEu
+User-agent: Grabber
+User-agent: Core-project
+User-agent: Openvas
+User-agent: Nessus
+User-agent: BlackWidow
+User-agent: Bolt
+User-agent: Custo
+User-agent: HTTrack
+User-agent: LinkWalker
+User-agent: lwp-request
+User-agent: WebStripper
+User-agent: WebZIP
+Disallow: /
+
+# Блокування агресивних маркетингових парсерів, що зливають твою аналітику
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: Rogerbot
+User-agent: DotBot
+User-agent: MJ12bot
+Disallow: /
+
+# =====================================================================
+# 🧠 КЛАСТЕР ШІ: ДОВІРЕНІ ВЕЛИКІ ТА МАЛІ МОДЕЛІ (LLM / SLM)
+# =====================================================================
+# ШІ-моделі ігнорують Crawl-delay. Їхню швидкість професійно регулює Cloudflare WAF.
+
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: DeepSeekSpider
+User-agent: ClaudeBot
+User-agent: Anthropic-ai
+User-agent: PerplexityBot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Diffbot
+User-agent: MetaAutomatedUser
+Allow: /
+
+# =====================================================================
+# 🌍 КЛАСТЕР КЛАСИЧНИХ ПОШУКОВИКІВ (ОПТИМІЗАЦІЯ НАВАНТАЖЕННЯ КАНАЛУ)
+# =====================================================================
+# Ці системи розуміють затримку запитів, що захищає твій сервер від перевантаження.
+
+User-agent: bingbot
+User-agent: Adidxbot
+Crawl-delay: 2
+
+User-agent: Baiduspider
+User-agent: Baiduspider-image
+User-agent: Sogou web spider
+Crawl-delay: 2
+
+User-agent: NaverBot
+User-agent: Yeti
+Crawl-delay: 2
+
+User-agent: YandexBot
+User-agent: YandexImages
+Crawl-delay: 1
+
+User-agent: CocCocBot
+Crawl-delay: 1

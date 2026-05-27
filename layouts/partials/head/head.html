@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ .Title }}",
+  "image": "{{ .Params.image }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Congo Enterprise Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Congo Enterprise Hub",
+    "logo": { "@type": "ImageObject", "url": "/logo.png" }
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "description": "{{ .Description }}"
+}
+</script>
