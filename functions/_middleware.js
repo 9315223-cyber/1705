@@ -1,33 +1,35 @@
 export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
+  const userAgent = (request.headers.get("user-agent") || "").toLowerCase();
 
-  // Перехоплюємо потік ТІЛЬКИ на головному корені сайту "/"
+  // ПРИМІТКА: Цей список синхронізовано з файлом static/robots.txt
+  // Якщо бот є у цьому списку, ми відключаємо гео-перенаправлення, щоб він міг просканувати всі 9 мов.
+  const aiBots = ["gptbot", "chatgpt-user", "google-extended", "deepseekspider", "claudebot", "perplexitybot", "applebot"];
+  const isAiBot = aiBots.some(bot => userAgent.includes(bot));
+
+  if (isAiBot) {
+    return next(); // Бот проходить вільно
+  }
+
+  // ПРИМІТКА: Працює тільки для головної сторінки сайту (домену).
   if (url.pathname === "/") {
-    // Зчитуємо гео-дані безпосередньо з IP-адреси клієнта на рівні мережі Cloudflare
     const country = request.cf?.country?.toLowerCase();
 
-    // Матриця мовного відповідності (Твоя карта 9 мов)
+    // ПРИМІТКА: Матриця мов. Ключі (ua, de...) - це країни з Cloudflare. 
+    // Значення (/uk/, /de/...) відповідають папкам контенту, які ми створили у config.toml.
     const countryToLocale = {
-      ua: "/uk/",
-      de: "/de/",
-      fr: "/fr/",
-      es: "/es/",
-      cn: "/zh/",
-      tw: "/zh/",
-      tr: "/tr/",
-      ie: "/ga/",
-      ru: "/ru/"
+      ua: "/uk/", de: "/de/", at: "/de/", ch: "/de/",
+      fr: "/fr/", be: "/fr/", es: "/es/", mx: "/es/",
+      cn: "/zh/", tw: "/zh/", tr: "/tr/", ie: "/ga/",
+      ru: "/ru/", by: "/ru/", kz: "/ru/"
     };
 
-    // Визначаємо мову: якщо країни немає в списку, віддаємо "/uk/", як вказано в нашому config.toml
     const targetLocale = countryToLocale[country] || "/uk/";
 
-    // Повертаємо швидкий 302-редірект. 
-    // ВАЖЛИВО: Використовуємо 302 (тимчасовий), щоб не руйнувати кеш користувачів, які подорожують
+    // ПРИМІТКА: 302 редірект вказує ШІ, що це тимчасове перенаправлення для людини.
     return Response.redirect(new URL(targetLocale, request.url), 302);
   }
 
-  // Якщо користувач переходить по внутрішнім сторінкам (/uk/about чи /en/posts), хмара просто віддає статику
   return next();
 }

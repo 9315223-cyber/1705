@@ -3,37 +3,38 @@
 # =====================================================================
 
 [params]
-  # Основні налаштування дизайну
   color = "blue"
   font = "sans"
   showLanguageChooser = true
   showSearch = true
-  homepage = "posts"
+  homepage = "posts" # ПРИМІТКА: Виводить на головну сторінку статті з папки /posts/
   
-  # Налаштування шапки (Header)
   [params.header]
     showLanguageChooser = true
     showSearch = true
-    logo = "logo.png"
+    logo = "logo.png" # ПРИМІТКА: Використовується в head.html для мікророзмітки логотипу
 
-  # Налаштування підвалу (Footer)
   [params.footer]
     showCopyright = true
-    showPoweredBy = false # ENTERPRISE: чистий футер без системних посилань
+    showPoweredBy = false # ПРИМІТКА: Ховаємо зайві посилання, покращуємо SEO-вагу
     showRSS = true
 
-  # Мета-дані для SEO (Синхронізовано з robots.txt)
   [params.meta]
-    robots = "index, follow"
+    robots = "index, follow" # ПРИМІТКА: Дозволяє індексацію на додаток до robots.txt
 
-  # Соціальні мережі (Зв'язок)
   [params.social]
     github = "9315223-cyber"
     linkedin = "company/marketing-hub"
     twitter = "marketing_hub"
 
-  # Налаштування зображень (Lighthouse Optimization)
   [params.images]
-    lazyLoading = true
+    lazyLoading = true # ПРИМІТКА: Забезпечує 100/100 балів Lighthouse (відкладене завантаження)
     quality = 85
-    
+
+# ПРИМІТКА: Цей блок береться скриптом head.html і перетворюється на JSON-LD.
+# ШІ-боти читають це, щоб підтвердити вашу експертність (E-E-A-T).
+[author]
+  name = "Congo Enterprise Team"
+  image = "profile.png"
+  headline = "Next-Gen Multilingual Marketing & AI Hub"
+  
