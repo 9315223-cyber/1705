@@ -5,7 +5,6 @@
 # 🇺🇦 UKRAINIAN
 [uk]
   locale = "uk-ua"
-  contentDir = "content/uk"
   label = "Українська"
   weight = 2
   [uk.params]
@@ -30,7 +29,6 @@
 # 🇬🇧 ENGLISH
 [en]
   locale = "en-us"
-  contentDir = "content/en"
   label = "English"
   weight = 1
   [en.params]
@@ -55,7 +53,6 @@
 # 🇩🇪 GERMAN
 [de]
   locale = "de-de"
-  contentDir = "content/de"
   label = "Deutsch"
   weight = 3
   [de.params]
@@ -80,7 +77,6 @@
 # 🇫🇷 FRENCH
 [fr]
   locale = "fr-fr"
-  contentDir = "content/fr"
   label = "Français"
   weight = 4
   [fr.params]
@@ -105,7 +101,6 @@
 # 🇪🇸 SPANISH
 [es]
   locale = "es-es"
-  contentDir = "content/es"
   label = "Español"
   weight = 5
   [es.params]
@@ -130,7 +125,6 @@
 # 🇷🇺 RUSSIAN
 [ru]
   locale = "ru-ru"
-  contentDir = "content/ru"
   label = "Русский"
   weight = 6
   [ru.params]
@@ -155,7 +149,6 @@
 # 🇨🇳 CHINESE
 [zh]
   locale = "zh-cn"
-  contentDir = "content/zh"
   label = "中文"
   weight = 7
   [zh.params]
@@ -180,7 +173,6 @@
 # 🇹🇷 TURKISH
 [tr]
   locale = "tr-tr"
-  contentDir = "content/tr"
   label = "Türkçe"
   weight = 8
   [tr.params]
@@ -205,7 +197,6 @@
 # 🇮🇪 IRISH
 [ga]
   locale = "ga-ie"
-  contentDir = "content/ga"
   label = "Gaeilge"
   weight = 9
   [ga.params]
@@ -226,3 +217,4 @@
     name = "Teagmháil"
     pageRef = "/contact"
     weight = 40
+    

@@ -1,7 +1,6 @@
 ---
 title: "Наші контакти"
 layout: "contact"
-translationKey: "home-page"
 translationKey: "contact-page"
 ---
 

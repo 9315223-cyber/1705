@@ -25,29 +25,30 @@ i18n:
 
 collections:
   # =====================================================================
-  # 3. СТАТИЧНІ СТОРІНКИ (Одиночні файли)
+  # 3. СТАТИЧНІ СТОРІНКИ
   # =====================================================================
   - name: "pages"
     label: "Головні сторінки"
     i18n: true
     files:
-      - title: "Головна сторінка"
-        name: "homepage"
+      - name: "homepage"
+        label: "Головна сторінка"
         file: "content/{{locale}}/_index.md"
+        i18n: true
         fields:
-          - { label: "Заголовок головної сторінки", name: "title", widget: "string", i18n: true }
-          - { label: "Мета-опис для SEO", name: "description", widget: "string", i18n: true }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "home-page" }
-          - { label: "Текст на головній сторінці", name: "body", widget: "markdown", i18n: true }
+          - { label: "Заголовок", name: "title", widget: "string", i18n: true }
+          - { label: "Мета-опис", name: "description", widget: "string", i18n: true }
+          - { label: "Ключ", name: "translationKey", widget: "string", i18n: "duplicate", default: "home-page" }
+          - { label: "Текст", name: "body", widget: "markdown", i18n: true }
 
-      - title: "Сторінка Контакти"
-        name: "contact"
+      - name: "contact"
+        label: "Сторінка Контакти"
         file: "content/{{locale}}/contact.md"
+        i18n: true
         fields:
-          - { label: "Заголовок сторінки", name: "title", widget: "string", i18n: true }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "contact-page" }
-          - { label: "Текст над формою", name: "body", widget: "markdown", i18n: true }
-
+          - { label: "Заголовок", name: "title", widget: "string", i18n: true }
+          - { label: "Ключ", name: "translationKey", widget: "string", i18n: "duplicate", default: "contact-page" }
+          - { label: "Текст", name: "body", widget: "markdown", i18n: true }
   # =====================================================================
   # 4. ДИНАМІЧНИЙ КОНТЕНТ: БЛОГ ТА ПОСТИ
   # =====================================================================
