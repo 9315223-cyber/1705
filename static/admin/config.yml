@@ -6,11 +6,14 @@ backend:
   repo: 9315223-cyber/1705
   branch: main
 
+# УВІМКНЕНО ПРОФЕСІЙНИЙ РЕЖИМ ПУБЛІКАЦІЇ (ЧЕРНЕТКИ)
+publish_mode: editorial_workflow
+
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 site_url: "https://cyber-hub-1705.pages.dev"
-display_url: ""
+display_url: "https://cyber-hub-1705.pages.dev"
 
 # =====================================================================
 # 2. МОВНА МАТРИЦЯ (9 мов)
@@ -22,7 +25,7 @@ i18n:
 
 collections:
   # =====================================================================
-  # 3. СТАТИЧНІ СТОРІНКИ (Одиночні файли: Головна та Контакти)
+  # 3. СТАТИЧНІ СТОРІНКИ (Одиночні файли)
   # =====================================================================
   - name: "pages"
     label: "Головні сторінки"
@@ -30,20 +33,20 @@ collections:
     files:
       - title: "Головна сторінка"
         name: "homepage"
-        file: "content/en/_index.md" 
+        file: "content/en/_index.md"
         fields:
-          - { label: "Заголовок головної сторінки", name: "title", widget: "string" }
-          - { label: "Мета-опис для SEO", name: "description", widget: "string" }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", default: "home" }
-          - { label: "Текст на головній сторінці", name: "body", widget: "markdown" }
+          - { label: "Заголовок головної сторінки", name: "title", widget: "string", i18n: true }
+          - { label: "Мета-опис для SEO", name: "description", widget: "string", i18n: true }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "home" }
+          - { label: "Текст на головній сторінці", name: "body", widget: "markdown", i18n: true }
 
       - title: "Сторінка Контакти"
         name: "contact"
         file: "content/en/contact.md"
         fields:
-          - { label: "Заголовок сторінки", name: "title", widget: "string" }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", default: "contact" }
-          - { label: "Текст над формою", name: "body", widget: "markdown" }
+          - { label: "Заголовок сторінки", name: "title", widget: "string", i18n: true }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "contact" }
+          - { label: "Текст над формою", name: "body", widget: "markdown", i18n: true }
 
   # =====================================================================
   # 4. ДИНАМІЧНИЙ КОНТЕНТ: БЛОГ ТА ПОСТИ
@@ -54,15 +57,19 @@ collections:
     i18n: true
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: ["date", "title"]
     fields:
-      - { label: "Заголовок статті", name: "title", widget: "string" }
+      - { label: "Заголовок статті", name: "title", widget: "string", i18n: true }
       - { label: "Дата публікації", name: "date", widget: "datetime" }
       - { label: "Автор (E-E-A-T)", name: "author", widget: "string", default: "Enterprise Hub Expert" }
-      - { label: "Короткий опис (Meta Description)", name: "description", widget: "string" }
-      - { label: "Суть для ШІ (Summary)", name: "summary_ai", widget: "string", required: false }
-      - { label: "Ключові слова", name: "keywords_ai", widget: "string", required: false }
-      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
-      - { label: "Текст статті", name: "body", widget: "markdown" }
+      - { label: "Обкладинка (Зображення)", name: "image", widget: "image", required: false, i18n: "duplicate" }
+      - { label: "Теги", name: "tags", widget: "list", required: false, i18n: true }
+      - { label: "Короткий опис (Meta Description)", name: "description", widget: "string", i18n: true }
+      - { label: "Суть для ШІ (Summary)", name: "summary_ai", widget: "string", required: false, i18n: true }
+      - { label: "Ключові слова", name: "keywords_ai", widget: "string", required: false, i18n: true }
+      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate" }
+      - { label: "Текст статті", name: "body", widget: "markdown", i18n: true }
 
   # =====================================================================
   # 5. ДИНАМІЧНИЙ КОНТЕНТ: НАШІ РОБОТИ (ПОРТФОЛІО)
@@ -73,13 +80,16 @@ collections:
     i18n: true
     create: true
     slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
     fields:
-      - { label: "Назва проєкту", name: "title", widget: "string" }
+      - { label: "Назва проєкту", name: "title", widget: "string", i18n: true }
       - { label: "Дата реалізації", name: "date", widget: "datetime" }
+      - { label: "Обкладинка проєкту", name: "image", widget: "image", required: false, i18n: "duplicate" }
       - { label: "Посилання на проєкт", name: "link", widget: "string", required: false }
-      - { label: "Короткий опис кейсу", name: "description", widget: "text" }
-      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
-      - { label: "Детальний опис", name: "body", widget: "markdown" }
+      - { label: "Короткий опис кейсу", name: "description", widget: "text", i18n: true }
+      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate" }
+      - { label: "Детальний опис", name: "body", widget: "markdown", i18n: true }
 
   # =====================================================================
   # 6. СИСТЕМНІ ФАЙЛИ ТА ПРАВИЛА РОБОТІВ
