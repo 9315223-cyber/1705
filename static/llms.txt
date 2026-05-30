@@ -1,5 +1,7 @@
-# Congo Enterprise Marketing Hub
+# Congo Enterprise Hub
+
 ## Context
-Multilingual site on Hugo + Congo theme. 9 languages active.
-## Structure
-- /en/, /uk/, /de/, /fr/, /es/, /ru/, /zh/, /tr/, /ga/
+High-performance multilingual marketing hub.
+
+## Language Matrix
+/en/, /uk/, /de/, /fr/, /es/, /ru/, /zh/, /tr/, /ga/

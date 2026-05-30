@@ -1,17 +1,11 @@
 ---
-title: "Enterprise Hub Landing"
-date: 2026-05-19T12:00:00+02:00
-draft: false
-description: "Мультимовний корпоративний хаб автоматизації та ШІ-рішень"
-translationKey: "homepage"
-# Гео-координати для карт та локального SEO
-geolocation:
-  latitude: 48.0673
-  longitude: 9.2671
-  city: "Sigmaringen"
-  country: "Germany"
-# Маркетингова конверсія
-googleAdsConversionID: "AW-000000000"
+title: "Accueil — Congo Enterprise Hub"
+description: "Провідний міжнародний маркетинговий хаб. Оптимізована екосистема для класичного пошуку та генеративних ШІ."
+date: 2026-05-28T18:00:00+02:00
+lastmod: 2026-05-28T18:00:00+02:00
+image: "logo.png"
+type: "page"
+layout: "homepage"
 ---
-# Вітаємо у Congo Enterprise Hub!
-Сайт успішно розгорнуто, оптимізовано під ШІ (SGO) та Edge-мережу Cloudflare.
+
+Ласкаво просимо до **Congo Enterprise Hub**! 

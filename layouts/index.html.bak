@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <header class="text-center pb-12 border-b border-neutral-200 dark:border-neutral-700">
+        <h1 class="text-4xl font-extrabold text-neutral-900 dark:text-white sm:text-5xl tracking-tight mb-4">
+            {{ .Title }}
+        </h1>
+        <div class="prose dark:prose-invert max-w-3xl mx-auto text-xl text-neutral-500">
+            {{ .Content }}
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+        
+        <div class="bg-neutral-50 dark:bg-neutral-800/50 p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/50">
+            <div class="flex items-center space-x-2 mb-6">
+                <span class="text-2xl">🇬🇧</span>
+                <h2 class="text-2xl font-bold text-neutral-900 dark:text-white tracking-tight">Latest News (EN)</h2>
+            </div>
+            <ul class="space-y-4">
+                {{ range first 5 (where .Site.RegularPages "Lang" "en") }}
+                <li class="group">
+                    <a href="{{ .RelPermalink }}" class="block p-4 rounded-xl bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md transition-all duration-200 border border-neutral-200/60 dark:border-neutral-800">
+                        <span class="block text-xs font-medium text-neutral-400 dark:text-neutral-500 mb-1">
+                            {{ .Date.Format "02.01.2006" }}
+                        </span>
+                        <span class="text-lg font-semibold text-primary-600 dark:text-primary-400 group-hover:underline">
+                            {{ .Title }}
+                        </span>
+                        {{ with .Params.description }}
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-2">{{ . }}</p>
+                        {{ end }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="bg-neutral-50 dark:bg-neutral-800/50 p-6 rounded-2xl border border-neutral-100 dark:border-neutral-700/50">
+            <div class="flex items-center space-x-2 mb-6">
+                <span class="text-2xl">🇩🇪</span>
+                <h2 class="text-2xl font-bold text-neutral-900 dark:text-white tracking-tight">Aktuelle Nachrichten (DE)</h2>
+            </div>
+            <ul class="space-y-4">
+                {{ range first 5 (where .Site.RegularPages "Lang" "de") }}
+                <li class="group">
+                    <a href="{{ .RelPermalink }}" class="block p-4 rounded-xl bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md transition-all duration-200 border border-neutral-200/60 dark:border-neutral-800">
+                        <span class="block text-xs font-medium text-neutral-400 dark:text-neutral-500 mb-1">
+                            {{ .Date.Format "02.01.2006" }}
+                        </span>
+                        <span class="text-lg font-semibold text-primary-600 dark:text-primary-400 group-hover:underline">
+                            {{ .Title }}
+                        </span>
+                        {{ with .Params.description }}
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-2">{{ . }}</p>
+                        {{ end }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </div>
+</div>
+{{ end }}

@@ -1,48 +1,67 @@
+# =====================================================================
+# CONGO ENTERPRISE — LANGUAGES CONFIGURATION
+# =====================================================================
+
 [en]
-  languageName = "English"
   contentDir = "content/en"
+  languageName = "English"
   weight = 1
   [en.params]
-    title = "Marketing Hub (EN)"
+    title = "Congo Enterprise Hub (EN)"
 
 [uk]
-  languageName = "Українська"
   contentDir = "content/uk"
+  languageName = "Українська"
   weight = 2
   [uk.params]
-    title = "Маркетинговий Хаб (UA)"
+    title = "Congo Enterprise Hub (UA)"
 
 [de]
-  languageName = "Deutsch"
   contentDir = "content/de"
+  languageName = "Deutsch"
   weight = 3
+  [de.params]
+    title = "Congo Enterprise Hub (DE)"
 
 [fr]
-  languageName = "Français"
   contentDir = "content/fr"
+  languageName = "Français"
   weight = 4
+  [fr.params]
+    title = "Congo Enterprise Hub (FR)"
 
 [es]
-  languageName = "Español"
   contentDir = "content/es"
+  languageName = "Español"
   weight = 5
+  [es.params]
+    title = "Congo Enterprise Hub (ES)"
 
 [ru]
-  languageName = "Русский"
   contentDir = "content/ru"
+  languageName = "Русский"
   weight = 6
+  [ru.params]
+    title = "Congo Enterprise Hub (RU)"
 
 [zh]
-  languageName = "中文"
   contentDir = "content/zh"
+  languageName = "中文"
   weight = 7
+  [zh.params]
+    title = "Congo Enterprise Hub (ZH)"
 
 [tr]
-  languageName = "Türkçe"
   contentDir = "content/tr"
+  languageName = "Türkçe"
   weight = 8
+  [tr.params]
+    title = "Congo Enterprise Hub (TR)"
 
 [ga]
-  languageName = "Gaeilge"
   contentDir = "content/ga"
+  languageName = "Gaeilge"
   weight = 9
+  [ga.params]
+    title = "Congo Enterprise Hub (GA)"
+    

@@ -5,133 +5,162 @@
 # 🇬🇧 ENGLISH
 [[en]]
   name = "Home"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[en]]
   name = "Blog"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[en]]
-  name = "About"
-  pageRef = "/about"
+  name = "Our Works"
+  url = "/works"
   weight = 30
 [[en]]
   name = "Contact"
-  pageRef = "/contact"
+  url = "/contact"
   weight = 40
 
 # 🇺🇦 UKRAINIAN
 [[uk]]
   name = "Головна"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[uk]]
-  name = "Блог"
-  pageRef = "/posts"
+  name = "Блог / Пости"
+  url = "/posts"
   weight = 20
 [[uk]]
-  name = "Про нас"
-  pageRef = "/about"
+  name = "Наші роботи"
+  url = "/works"
   weight = 30
 [[uk]]
   name = "Контакти"
-  pageRef = "/contact"
+  url = "/contact"
   weight = 40
 
 # 🇩🇪 GERMAN
 [[de]]
   name = "Startseite"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[de]]
   name = "Blog"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[de]]
-  name = "Über uns"
-  pageRef = "/about"
+  name = "Unsere Arbeiten"
+  url = "/works"
   weight = 30
+[[de]]
+  name = "Kontakt"
+  url = "/contact"
+  weight = 40
 
 # 🇫🇷 FRENCH
 [[fr]]
   name = "Accueil"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[fr]]
   name = "Blog"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[fr]]
-  name = "À propos"
-  pageRef = "/about"
+  name = "Nos réalisations"
+  url = "/works"
   weight = 30
+[[fr]]
+  name = "Contact"
+  url = "/contact"
+  weight = 40
 
 # 🇪🇸 SPANISH
 [[es]]
   name = "Inicio"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[es]]
   name = "Blog"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[es]]
-  name = "Contacto"
-  pageRef = "/contact"
+  name = "Nuestros trabajos"
+  url = "/works"
   weight = 30
+[[es]]
+  name = "Contacto"
+  url = "/contact"
+  weight = 40
 
 # 🇷🇺 RUSSIAN
 [[ru]]
   name = "Главная"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[ru]]
   name = "Блог"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[ru]]
-  name = "Контакты"
-  pageRef = "/contact"
+  name = "Наши работы"
+  url = "/works"
   weight = 30
+[[ru]]
+  name = "Контакты"
+  url = "/contact"
+  weight = 40
 
 # 🇨🇳 CHINESE
 [[zh]]
   name = "首页"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[zh]]
   name = "博客"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[zh]]
-  name = "联系我们"
-  pageRef = "/contact"
+  name = "我们的作品"
+  url = "/works"
   weight = 30
+[[zh]]
+  name = "联系我们"
+  url = "/contact"
+  weight = 40
 
 # 🇹🇷 TURKISH
 [[tr]]
   name = "Anasayfa"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[tr]]
   name = "Blog"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[tr]]
-  name = "İletişim"
-  pageRef = "/contact"
+  name = "Çalışmalarımız"
+  url = "/works"
   weight = 30
+[[tr]]
+  name = "İletişim"
+  url = "/contact"
+  weight = 40
 
 # 🇮🇪 IRISH
 [[ga]]
   name = "Baile"
-  pageRef = "/"
+  url = "/"
   weight = 10
 [[ga]]
   name = "Blag"
-  pageRef = "/posts"
+  url = "/posts"
   weight = 20
 [[ga]]
-  name = "Teagmháil"
-  pageRef = "/contact"
+  name = "Ár nOibreacha"
+  url = "/works"
   weight = 30
+[[ga]]
+  name = "Teagmháil"
+  url = "/contact"
+  weight = 40
+  

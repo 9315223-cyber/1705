@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <header class="text-center mb-12">
+        <h1 class="text-3xl font-extrabold text-neutral-900 dark:text-white sm:text-4xl mb-4">{{ .Title }}</h1>
+        <div class="prose dark:prose-invert text-neutral-500 mx-auto">{{ .Content }}</div>
+    </header>
+
+    <form action="#" method="POST" class="space-y-6 bg-white dark:bg-neutral-800 p-8 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-700">
+        <div>
+            <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Ваше ім'я</label>
+            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-xl border-neutral-300 dark:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-primary-500 focus:ring-primary-500 p-3">
+        </div>
+
+        <div>
+            <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Email адреса</label>
+            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-xl border-neutral-300 dark:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-primary-500 focus:ring-primary-500 p-3">
+        </div>
+
+        <div>
+            <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Повідомлення</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-xl border-neutral-300 dark:border-neutral-600 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-primary-500 focus:ring-primary-500 p-3"></textarea>
+        </div>
+
+        <div>
+            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                Надіслати повідомлення
+            </button>
+        </div>
+    </form>
+</div>
+{{ end }}

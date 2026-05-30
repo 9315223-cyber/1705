@@ -1,14 +1,15 @@
 backend:
   name: github
-  repo: 9315223-cyber/1705  # Тут має бути саме ваша назва репозиторію 
-  branch: main             
+  repo: 9315223-cyber/1705
+  branch: main
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-site_url: ""
+site_url: "https://cyber-hub-1705.pages.dev"
 display_url: ""
 
+# Глобальне налаштування мультиязичності для Sveltia CMS
 i18n:
   structure: multiple_folders
   locales: [en, uk, de, fr, es, ru, zh, tr, ga]
@@ -16,12 +17,31 @@ i18n:
 
 collections:
   # =====================================================================
-  # 📝 КОЛЕКЦІЯ 1: БЛОГ / ПОСТИ / НАУКОВІ МАТЕРІАЛИ
+  # 🏠 ГОЛОВНА СТОРІНКА (Редагування контенту для кожної з 9 мов)
+  # =====================================================================
+  - name: "homepage"
+    label: "Головна сторінка"
+    folder: "content"
+    depth: 1
+    filter: { field: "layout", value: "homepage" }
+    i18n: true
+    create: false
+    fields:
+      - { label: "Заголовок головної сторінки", name: "title", widget: "string" }
+      - { label: "Мета-опис (SEO)", name: "description", widget: "string" }
+      - { label: "Layout Тип (Не змінювати)", name: "layout", widget: "hidden", default: "homepage" }
+      - { label: "Type Тип (Не змінювати)", name: "type", widget: "hidden", default: "page" }
+      - { label: "Головний текст послуг з автоматизації", name: "body", widget: "markdown" }
+
+  # =====================================================================
+  # 📝 КОЛЕКЦІЯ 1: БЛОГ / ПОСТИ / НАУКОВІ МАТЕРІАЛИ (9 мов)
   # =====================================================================
   - name: "posts"
     label: "Блог / Пости"
     folder: "content/{{locale}}/posts"
+    i18n: true
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Заголовок статті (H1)", name: "title", widget: "string" }
       - { label: "Дата публікації", name: "date", widget: "datetime" }
@@ -33,17 +53,34 @@ collections:
       - { label: "Текст статті (Markdown)", name: "body", widget: "markdown" }
 
   # =====================================================================
-  # 📰 КОЛЕКЦІЯ 2: АВТОМАТИЧНА СТРІЧКА НОВИН (Генератор RSS для ботів)
+  # 💼 КОЛЕКЦІЯ 2: НАШІ РОБОТИ (Works кейси для портфоліо)
   # =====================================================================
-  - name: "news"
-    label: "Стрічка новин"
-    folder: "content/{{locale}}/news"
+  - name: "works"
+    label: "Наші роботи"
+    folder: "content/{{locale}}/works"
+    i18n: true
     create: true
+    slug: "{{slug}}"
     fields:
-      - { label: "Заголовок новини", name: "title", widget: "string" }
-      - { label: "Дата релізу", name: "date", widget: "datetime" }
-      - { label: "Джерело/Організація релізу", name: "publisher", widget: "string", default: "Congo Enterprise Hub" }
-      - { label: "Короткий виклад новини для швидких відповідей ChatGPT/DeepSeek", name: "description", widget: "string" }
-      - { label: "Локація події (Місто, Країна)", name: "location_geo", widget: "string", default: "Sigmaringen, Germany" }
+      - { label: "Назва проєкту / Кейсу", name: "title", widget: "string" }
+      - { label: "Дата реалізації", name: "date", widget: "datetime" }
+      - { label: "Пряме посилання на сайт проєкту", name: "link", widget: "string" }
+      - { label: "Короткий опис кейсу (SEO Title/Meta)", name: "description", widget: "text" }
       - { label: "Унікальний ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
-      - { label: "Текст новини", name: "body", widget: "markdown" }
+      - { label: "Детальний опис виконаних робіт (Markdown)", name: "body", widget: "markdown" }
+
+  # =====================================================================
+  # 📞 КОЛЕКЦІЯ 3: СТОРІНКА КОНТАКТІВ
+  # =====================================================================
+  - name: "contact"
+    label: "Сторінка Контакти"
+    folder: "content"
+    depth: 2
+    filter: { field: "layout", value: "contact" }
+    i18n: true
+    create: false
+    fields:
+      - { label: "Заголовок сторінки", name: "title", widget: "string" }
+      - { label: "Layout (Не змінювати)", name: "layout", widget: "hidden", default: "contact" }
+      - { label: "Контактна інформація та текст над формою", name: "body", widget: "markdown" }
+      
