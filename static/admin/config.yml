@@ -1,3 +1,6 @@
+# =====================================================================
+# 1. ОСНОВНІ НАЛАШТУВАННЯ СЕРВЕРА ТА БАЗИ ДАНИХ
+# =====================================================================
 backend:
   name: github
   repo: 9315223-cyber/1705
@@ -9,7 +12,9 @@ public_folder: "/images/uploads"
 site_url: "https://cyber-hub-1705.pages.dev"
 display_url: ""
 
-# Глобальне налаштування мультиязичності для Sveltia CMS
+# =====================================================================
+# 2. МОВНА МАТРИЦЯ (9 мов)
+# =====================================================================
 i18n:
   structure: multiple_folders
   locales: [en, uk, de, fr, es, ru, zh, tr, ga]
@@ -17,24 +22,31 @@ i18n:
 
 collections:
   # =====================================================================
-  # 🏠 ГОЛОВНА СТОРІНКА (Редагування контенту для кожної з 9 мов)
+  # 3. СТАТИЧНІ СТОРІНКИ (Одиночні файли: Головна та Контакти)
   # =====================================================================
-  - name: "homepage"
-    label: "Головна сторінка"
-    folder: "content"
-    depth: 1
-    filter: { field: "layout", value: "homepage" }
+  - name: "pages"
+    label: "Головні сторінки"
     i18n: true
-    create: false
-    fields:
-      - { label: "Заголовок головної сторінки", name: "title", widget: "string" }
-      - { label: "Мета-опис (SEO)", name: "description", widget: "string" }
-      - { label: "Layout Тип (Не змінювати)", name: "layout", widget: "hidden", default: "homepage" }
-      - { label: "Type Тип (Не змінювати)", name: "type", widget: "hidden", default: "page" }
-      - { label: "Головний текст послуг з автоматизації", name: "body", widget: "markdown" }
+    files:
+      - title: "Головна сторінка"
+        name: "homepage"
+        file: "content/en/_index.md" 
+        fields:
+          - { label: "Заголовок головної сторінки", name: "title", widget: "string" }
+          - { label: "Мета-опис для SEO", name: "description", widget: "string" }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", default: "home" }
+          - { label: "Текст на головній сторінці", name: "body", widget: "markdown" }
+
+      - title: "Сторінка Контакти"
+        name: "contact"
+        file: "content/en/contact.md"
+        fields:
+          - { label: "Заголовок сторінки", name: "title", widget: "string" }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", default: "contact" }
+          - { label: "Текст над формою", name: "body", widget: "markdown" }
 
   # =====================================================================
-  # 📝 КОЛЕКЦІЯ 1: БЛОГ / ПОСТИ / НАУКОВІ МАТЕРІАЛИ (9 мов)
+  # 4. ДИНАМІЧНИЙ КОНТЕНТ: БЛОГ ТА ПОСТИ
   # =====================================================================
   - name: "posts"
     label: "Блог / Пости"
@@ -43,17 +55,17 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Заголовок статті (H1)", name: "title", widget: "string" }
+      - { label: "Заголовок статті", name: "title", widget: "string" }
       - { label: "Дата публікації", name: "date", widget: "datetime" }
-      - { label: "Ім'я Автора (Вимога Google E-E-A-T)", name: "author", widget: "string", default: "Enterprise Hub Expert" }
-      - { label: "Короткий опис для класичного SEO (Meta Description)", name: "description", widget: "string" }
-      - { label: "Стислий концентрат факту для ШІ та SLM-панелей", name: "summary_ai", widget: "string" }
-      - { label: "Ключові слова для ШІ-асоціацій (через кому)", name: "keywords_ai", widget: "string" }
-      - { label: "Унікальний ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
-      - { label: "Текст статті (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Автор (E-E-A-T)", name: "author", widget: "string", default: "Enterprise Hub Expert" }
+      - { label: "Короткий опис (Meta Description)", name: "description", widget: "string" }
+      - { label: "Суть для ШІ (Summary)", name: "summary_ai", widget: "string", required: false }
+      - { label: "Ключові слова", name: "keywords_ai", widget: "string", required: false }
+      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
+      - { label: "Текст статті", name: "body", widget: "markdown" }
 
   # =====================================================================
-  # 💼 КОЛЕКЦІЯ 2: НАШІ РОБОТИ (Works кейси для портфоліо)
+  # 5. ДИНАМІЧНИЙ КОНТЕНТ: НАШІ РОБОТИ (ПОРТФОЛІО)
   # =====================================================================
   - name: "works"
     label: "Наші роботи"
@@ -62,25 +74,38 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Назва проєкту / Кейсу", name: "title", widget: "string" }
+      - { label: "Назва проєкту", name: "title", widget: "string" }
       - { label: "Дата реалізації", name: "date", widget: "datetime" }
-      - { label: "Пряме посилання на сайт проєкту", name: "link", widget: "string" }
-      - { label: "Короткий опис кейсу (SEO Title/Meta)", name: "description", widget: "text" }
-      - { label: "Унікальний ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
-      - { label: "Детальний опис виконаних робіт (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Посилання на проєкт", name: "link", widget: "string", required: false }
+      - { label: "Короткий опис кейсу", name: "description", widget: "text" }
+      - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string" }
+      - { label: "Детальний опис", name: "body", widget: "markdown" }
 
   # =====================================================================
-  # 📞 КОЛЕКЦІЯ 3: СТОРІНКА КОНТАКТІВ
+  # 6. СИСТЕМНІ ФАЙЛИ ТА ПРАВИЛА РОБОТІВ
   # =====================================================================
-  - name: "contact"
-    label: "Сторінка Контакти"
-    folder: "content"
-    depth: 2
-    filter: { field: "layout", value: "contact" }
-    i18n: true
-    create: false
-    fields:
-      - { label: "Заголовок сторінки", name: "title", widget: "string" }
-      - { label: "Layout (Не змінювати)", name: "layout", widget: "hidden", default: "contact" }
-      - { label: "Контактна інформація та текст над формою", name: "body", widget: "markdown" }
-      
+  - name: "system_configs"
+    label: "Системні файли (SEO / ШІ)"
+    delete: false
+    files:
+      - title: "Політика для ШІ (ai.txt)"
+        name: "ai_txt"
+        file: "static/ai.txt"
+        format: "raw"
+        fields:
+          - { label: "Вміст ai.txt", name: "body", widget: "text" }
+
+      - title: "Безпека Cloudflare (_headers)"
+        name: "headers"
+        file: "static/_headers"
+        format: "raw"
+        fields:
+          - { label: "Вміст _headers", name: "body", widget: "text" }
+
+      - title: "Правила для роботів (robots.txt)"
+        name: "robots_txt"
+        file: "static/robots.txt"
+        format: "raw"
+        fields:
+          - { label: "Вміст robots.txt", name: "body", widget: "text" }
+          
