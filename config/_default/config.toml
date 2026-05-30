@@ -22,3 +22,30 @@ canonifyURLs = false
   category = "categories"
   tag = "tags"
   series = "series"
+[params]
+  # Вмикаємо пошук (лупа у верхній панелі)
+  showSearch = true
+  
+  # Вмикаємо перемикач мов (глобус у верхній панелі)
+  showLanguageSwitcher = true
+  
+  # Опціонально: додаємо ще зручні налаштування для Congo
+  showMenu = true
+  showThemeToggle = true
+  [menus]
+  [[menus.main]]
+    name = "Головна"
+    pageRef = "/"
+    weight = 10
+  [[menus.main]]
+    name = "Блог"
+    pageRef = "/posts"
+    weight = 20
+  [[menus.main]]
+    name = "Наші роботи"
+    pageRef = "/works"
+    weight = 30
+  [[menus.main]]
+    name = "Контакти"
+    pageRef = "/contact"
+    weight = 40
