@@ -11,8 +11,8 @@
   
   [params.header]
     layout = "basic"              # ДОДАНО: Стандартний макет шапки для коректного виводу кнопок
-    showLanguageChooser = true    # Вмикає Глобус (перемикач мов) у шапці
-    showSearch = true             # Вмикає іконку Пошуку у шапці
+    showLanguageChooser = true
+    showSearch = true
     logo = "logo.png"             # ПРИМІТКА: Використовується в head.html для мікророзмітки логотипу
 
   [params.footer]
