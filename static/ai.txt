@@ -25,8 +25,8 @@ Update-Frequency: Daily
 
 # ПРИМІТКА ДЛЯ КОРЕГУВАННЯ: Заміни "ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev" 
 # на твій реальний домен сайту після його підключення.
-News-Feed: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/uk/news/index.xml
-Blog-Feed: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/uk/posts/index.xml
+News-Feed: https://cyber-hub-1705.pages.dev/uk/news/index.xml
+Blog-Feed: https://cyber-hub-1705.pages.dev/uk/posts/index.xml
 
 # =====================================================================
 # 📜 ПРАВИЛА ЛІЦЕНЗУВАННЯ

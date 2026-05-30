@@ -15,8 +15,8 @@ Allow: /
 # ПРИМІТКА ДЛЯ КОРЕГУВАННЯ: Коли дізнаєшся точний домен, заміни 
 # "ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev" на свою реальну адресу (наприклад, site.com)
 
-Sitemap: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/sitemap.xml
-X-AI-Policy: https://ВСТАВ_СВІЙ_ДОМЕН_ТУТ.pages.dev/ai.txt
+Sitemap: https://cyber-hub-1705.pages.dev/sitemap.xml
+X-AI-Policy: https://cyber-hub-1705.pages.dev/ai.txt
 IndexNow: https://api.indexnow.org/
 
 # =====================================================================

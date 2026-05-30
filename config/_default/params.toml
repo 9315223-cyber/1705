@@ -7,7 +7,7 @@
   font = "sans"
   showLanguageChooser = true
   showSearch = true
-  homepage = "posts" # ПРИМІТКА: Виводить на головну сторінку статті з папки /posts/
+  # homepage = "posts" # ПРИМІТКА: Виводить на головну сторінку статті з папки /posts/ ЯКЩО ХОЧЕШ??? 
   
   [params.header]
     layout = "basic"              # ДОДАНО: Стандартний макет шапки для коректного виводу кнопок
@@ -41,4 +41,3 @@
   name = "Congo Enterprise Team"
   image = "profile.png"
   headline = "Next-Gen Multilingual Marketing & AI Hub"
-  

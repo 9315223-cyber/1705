@@ -1,67 +1,220 @@
 # =====================================================================
-# CONGO ENTERPRISE — LANGUAGES CONFIGURATION
+# CONGO ENTERPRISE — INTEGRATED LANGUAGES & NAVIGATION CONFIG
 # =====================================================================
 
-[en]
-  contentDir = "content/en"
-  languageName = "English"
-  weight = 1
-  [en.params]
-    title = "Congo Enterprise Hub (EN)"
-
+# 🇺🇦 UKRAINIAN
 [uk]
   contentDir = "content/uk"
   languageName = "Українська"
   weight = 2
   [uk.params]
     title = "Congo Enterprise Hub (UA)"
+  [[uk.menu.main]]
+    name = "Головна"
+    pageRef = "/"
+    weight = 10
+  [[uk.menu.main]]
+    name = "Блог / Пости"
+    pageRef = "/posts"
+    weight = 20
+  [[uk.menu.main]]
+    name = "Наші роботи"
+    pageRef = "/works"
+    weight = 30
+  [[uk.menu.main]]
+    name = "Контакти"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇬🇧 ENGLISH
+[en]
+  contentDir = "content/en"
+  languageName = "English"
+  weight = 1
+  [en.params]
+    title = "Congo Enterprise Hub (EN)"
+  [[en.menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[en.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+  [[en.menu.main]]
+    name = "Our Works"
+    pageRef = "/works"
+    weight = 30
+  [[en.menu.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 40
+
+# 🇩🇪 GERMAN
 [de]
   contentDir = "content/de"
   languageName = "Deutsch"
   weight = 3
   [de.params]
     title = "Congo Enterprise Hub (DE)"
+  [[de.menu.main]]
+    name = "Startseite"
+    pageRef = "/"
+    weight = 10
+  [[de.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+  [[de.menu.main]]
+    name = "Unsere Arbeiten"
+    pageRef = "/works"
+    weight = 30
+  [[de.menu.main]]
+    name = "Kontakt"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇫🇷 FRENCH
 [fr]
   contentDir = "content/fr"
   languageName = "Français"
   weight = 4
   [fr.params]
     title = "Congo Enterprise Hub (FR)"
+  [[fr.menu.main]]
+    name = "Accueil"
+    pageRef = "/"
+    weight = 10
+  [[fr.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+  [[fr.menu.main]]
+    name = "Nos réalisations"
+    pageRef = "/works"
+    weight = 30
+  [[fr.menu.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇪🇸 SPANISH
 [es]
   contentDir = "content/es"
   languageName = "Español"
   weight = 5
   [es.params]
     title = "Congo Enterprise Hub (ES)"
+  [[es.menu.main]]
+    name = "Inicio"
+    pageRef = "/"
+    weight = 10
+  [[es.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+  [[es.menu.main]]
+    name = "Nuestros trabajos"
+    pageRef = "/works"
+    weight = 30
+  [[es.menu.main]]
+    name = "Contacto"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇷🇺 RUSSIAN
 [ru]
   contentDir = "content/ru"
   languageName = "Русский"
   weight = 6
   [ru.params]
     title = "Congo Enterprise Hub (RU)"
+  [[ru.menu.main]]
+    name = "Главная"
+    pageRef = "/"
+    weight = 10
+  [[ru.menu.main]]
+    name = "Блог"
+    pageRef = "/posts"
+    weight = 20
+  [[ru.menu.main]]
+    name = "Наши работы"
+    pageRef = "/works"
+    weight = 30
+  [[ru.menu.main]]
+    name = "Контакты"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇨🇳 CHINESE
 [zh]
   contentDir = "content/zh"
   languageName = "中文"
   weight = 7
   [zh.params]
     title = "Congo Enterprise Hub (ZH)"
+  [[zh.menu.main]]
+    name = "首页"
+    pageRef = "/"
+    weight = 10
+  [[zh.menu.main]]
+    name = "博客"
+    pageRef = "/posts"
+    weight = 20
+  [[zh.menu.main]]
+    name = "我们的作品"
+    pageRef = "/works"
+    weight = 30
+  [[zh.menu.main]]
+    name = "联系我们"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇹🇷 TURKISH
 [tr]
   contentDir = "content/tr"
   languageName = "Türkçe"
   weight = 8
   [tr.params]
     title = "Congo Enterprise Hub (TR)"
+  [[tr.menu.main]]
+    name = "Anasayfa"
+    pageRef = "/"
+    weight = 10
+  [[tr.menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 20
+  [[tr.menu.main]]
+    name = "Çalışmalarımız"
+    pageRef = "/works"
+    weight = 30
+  [[tr.menu.main]]
+    name = "İletişim"
+    pageRef = "/contact"
+    weight = 40
 
+# 🇮🇪 IRISH
 [ga]
   contentDir = "content/ga"
   languageName = "Gaeilge"
   weight = 9
   [ga.params]
     title = "Congo Enterprise Hub (GA)"
+  [[ga.menu.main]]
+    name = "Baile"
+    pageRef = "/"
+    weight = 10
+  [[ga.menu.main]]
+    name = "Blag"
+    pageRef = "/posts"
+    weight = 20
+  [[ga.menu.main]]
+    name = "Ár nOibreacha"
+    pageRef = "/works"
+    weight = 30
+  [[ga.menu.main]]
+    name = "Teagmháil"
+    pageRef = "/contact"
+    weight = 40
     
