@@ -3,7 +3,7 @@ title = "Congo Enterprise Hub"
 timeout = "60s"
 
 # СИНХРОНІЗАЦІЯ ДЕФОЛТІВ (Україна — головне серце хабу)
-languageCode = "uk-ua"
+locale = "uk-ua"
 defaultContentLanguage = "uk"
 defaultContentLanguageInSubdir = true
 

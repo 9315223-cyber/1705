@@ -4,9 +4,9 @@
 
 # 🇺🇦 UKRAINIAN
 [uk]
-  languageCode = "uk-ua"
+  locale = "uk-ua"
   contentDir = "content/uk"
-  languageName = "Українська"
+  label = "Українська"
   weight = 2
   [uk.params]
     title = "Congo Enterprise Hub (UA)"
@@ -29,9 +29,9 @@
 
 # 🇬🇧 ENGLISH
 [en]
-  languageCode = "en-us"
+  locale = "en-us"
   contentDir = "content/en"
-  languageName = "English"
+  label = "English"
   weight = 1
   [en.params]
     title = "Congo Enterprise Hub (EN)"
@@ -54,9 +54,9 @@
 
 # 🇩🇪 GERMAN
 [de]
-  languageCode = "de-de"
+  locale = "de-de"
   contentDir = "content/de"
-  languageName = "Deutsch"
+  label = "Deutsch"
   weight = 3
   [de.params]
     title = "Congo Enterprise Hub (DE)"
@@ -79,9 +79,9 @@
 
 # 🇫🇷 FRENCH
 [fr]
-  languageCode = "fr-fr"
+  locale = "fr-fr"
   contentDir = "content/fr"
-  languageName = "Français"
+  label = "Français"
   weight = 4
   [fr.params]
     title = "Congo Enterprise Hub (FR)"
@@ -104,9 +104,9 @@
 
 # 🇪🇸 SPANISH
 [es]
-  languageCode = "es-es"
+  locale = "es-es"
   contentDir = "content/es"
-  languageName = "Español"
+  label = "Español"
   weight = 5
   [es.params]
     title = "Congo Enterprise Hub (ES)"
@@ -129,9 +129,9 @@
 
 # 🇷🇺 RUSSIAN
 [ru]
-  languageCode = "ru-ru"
+  locale = "ru-ru"
   contentDir = "content/ru"
-  languageName = "Русский"
+  label = "Русский"
   weight = 6
   [ru.params]
     title = "Congo Enterprise Hub (RU)"
@@ -154,9 +154,9 @@
 
 # 🇨🇳 CHINESE
 [zh]
-  languageCode = "zh-cn"
+  locale = "zh-cn"
   contentDir = "content/zh"
-  languageName = "中文"
+  label = "中文"
   weight = 7
   [zh.params]
     title = "Congo Enterprise Hub (ZH)"
@@ -179,9 +179,9 @@
 
 # 🇹🇷 TURKISH
 [tr]
-  languageCode = "tr-tr"
+  locale = "tr-tr"
   contentDir = "content/tr"
-  languageName = "Türkçe"
+  label = "Türkçe"
   weight = 8
   [tr.params]
     title = "Congo Enterprise Hub (TR)"
@@ -204,9 +204,9 @@
 
 # 🇮🇪 IRISH
 [ga]
-  languageCode = "ga-ie"
+  locale = "ga-ie"
   contentDir = "content/ga"
-  languageName = "Gaeilge"
+  label = "Gaeilge"
   weight = 9
   [ga.params]
     title = "Congo Enterprise Hub (GA)"

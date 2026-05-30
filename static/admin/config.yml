@@ -33,19 +33,19 @@ collections:
     files:
       - title: "Головна сторінка"
         name: "homepage"
-        file: "content/en/_index.md"
+        file: "content/{{locale}}/_index.md"
         fields:
           - { label: "Заголовок головної сторінки", name: "title", widget: "string", i18n: true }
           - { label: "Мета-опис для SEO", name: "description", widget: "string", i18n: true }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "home" }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "home-page" }
           - { label: "Текст на головній сторінці", name: "body", widget: "markdown", i18n: true }
 
       - title: "Сторінка Контакти"
         name: "contact"
-        file: "content/en/contact.md"
+        file: "content/{{locale}}/contact.md"
         fields:
           - { label: "Заголовок сторінки", name: "title", widget: "string", i18n: true }
-          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "contact" }
+          - { label: "Ключ зв'язку мов (translationKey)", name: "translationKey", widget: "string", i18n: "duplicate", default: "contact-page" }
           - { label: "Текст над формою", name: "body", widget: "markdown", i18n: true }
 
   # =====================================================================
