@@ -1,5 +1,5 @@
 ---
-translationKey: contact
+translationKey: 'key: "Контакти"'
 title: Контакти
 ---
 
