@@ -10,17 +10,18 @@
   homepage = "posts" # ПРИМІТКА: Виводить на головну сторінку статті з папки /posts/
   
   [params.header]
-    showLanguageChooser = true
-    showSearch = true
-    logo = "logo.png" # ПРИМІТКА: Використовується в head.html для мікророзмітки логотипу
+    layout = "basic"              # ДОДАНО: Стандартний макет шапки для коректного виводу кнопок
+    showLanguageChooser = true    # Вмикає Глобус (перемикач мов) у шапці
+    showSearch = true             # Вмикає іконку Пошуку у шапці
+    logo = "logo.png"             # ПРИМІТКА: Використовується в head.html для мікророзмітки логотипу
 
   [params.footer]
     showCopyright = true
-    showPoweredBy = false # ПРИМІТКА: Ховаємо зайві посилання, покращуємо SEO-вагу
+    showPoweredBy = false         # ПРИМІТКА: Ховаємо зайві посилання, покращуємо SEO-вагу
     showRSS = true
 
   [params.meta]
-    robots = "index, follow" # ПРИМІТКА: Дозволяє індексацію на додаток до robots.txt
+    robots = "index, follow"      # ПРИМІТКА: Дозволяє індексацію на додаток до robots.txt
 
   [params.social]
     github = "9315223-cyber"
@@ -28,9 +29,12 @@
     twitter = "marketing_hub"
 
   [params.images]
-    lazyLoading = true # ПРИМІТКА: Забезпечує 100/100 балів Lighthouse (відкладене завантаження)
+    lazyLoading = true            # ПРИМІТКА: Забезпечує 100/100 балів Lighthouse (відкладене завантаження)
     quality = 85
 
+# =====================================================================
+# E-E-A-T ТА МІКРОРОЗМІТКА (ДЛЯ ШІ ТА SEO)
+# =====================================================================
 # ПРИМІТКА: Цей блок береться скриптом head.html і перетворюється на JSON-LD.
 # ШІ-боти читають це, щоб підтвердити вашу експертність (E-E-A-T).
 [author]

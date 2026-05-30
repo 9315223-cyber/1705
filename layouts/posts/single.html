@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="flex flex-col md:flex-row w-full">
+    
+    <aside class="md:w-[15%] border-r border-neutral-200 dark:border-neutral-700 p-4 hidden md:block h-screen sticky top-0 overflow-y-auto">
+        <h3 class="font-bold text-lg mb-4 text-neutral-800 dark:text-neutral-200">Блоги / Пости</h3>
+        <ul class="space-y-3">
+            {{ range where site.RegularPages "Section" "posts" }}
+            <li>
+                <a href="{{ .RelPermalink }}" class="text-sm hover:text-primary-500 {{ if eq .RelPermalink $.RelPermalink }}font-bold text-primary-600{{ else }}text-neutral-500 dark:text-neutral-400{{ end }}">
+                    {{ .Title }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </aside>
+
+    <main class="md:w-[85%] p-4 md:p-10">
+        <article class="prose dark:prose-invert max-w-none">
+            <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
+            
+            {{ if .Params.image }}
+            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-full max-w-2xl rounded-lg mb-6 shadow-md">
+            {{ end }}
+
+            {{ .Content }}
+        </article>
+    </main>
+
+</div>
+{{ end }}
