@@ -7,6 +7,7 @@ type: page
 date: 2026-05-28T18:00:00+02:00
 lastmod: 2026-05-28T18:00:00+02:00
 layout: homepage
+translationKey: "home-page"
 ---
 
 Ласкаво просимо до **Congo Enterprise Hub**!

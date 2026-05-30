@@ -1,6 +1,8 @@
 ---
 title: "Наші контакти"
 layout: "contact"
+translationKey: "home-page"
+translationKey: "contact-page"
 ---
 
 Зв'яжіться з нами за допомогою форми нижче або пишіть на email@example.com.   content/ga/contact.md

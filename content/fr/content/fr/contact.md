@@ -1,6 +1,8 @@
 ---
-title: "Наші контакти"
+title: "Kontakt"
 layout: "contact"
+translationKey: "home-page"
+translationKey: "contact-page"
 ---
 
-Зв'яжіться з нами за допомогою форми нижче або пишіть на email@example.com.   content/fr/contact.md
+Kontaktieren Sie uns über das untenstehende Formular oder schreiben Sie uns an email@example.com.

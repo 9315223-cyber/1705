@@ -4,6 +4,7 @@
 
 # 🇺🇦 UKRAINIAN
 [uk]
+  languageCode = "uk-ua"
   contentDir = "content/uk"
   languageName = "Українська"
   weight = 2
@@ -28,6 +29,7 @@
 
 # 🇬🇧 ENGLISH
 [en]
+  languageCode = "en-us"
   contentDir = "content/en"
   languageName = "English"
   weight = 1
@@ -52,6 +54,7 @@
 
 # 🇩🇪 GERMAN
 [de]
+  languageCode = "de-de"
   contentDir = "content/de"
   languageName = "Deutsch"
   weight = 3
@@ -76,6 +79,7 @@
 
 # 🇫🇷 FRENCH
 [fr]
+  languageCode = "fr-fr"
   contentDir = "content/fr"
   languageName = "Français"
   weight = 4
@@ -100,6 +104,7 @@
 
 # 🇪🇸 SPANISH
 [es]
+  languageCode = "es-es"
   contentDir = "content/es"
   languageName = "Español"
   weight = 5
@@ -124,6 +129,7 @@
 
 # 🇷🇺 RUSSIAN
 [ru]
+  languageCode = "ru-ru"
   contentDir = "content/ru"
   languageName = "Русский"
   weight = 6
@@ -148,6 +154,7 @@
 
 # 🇨🇳 CHINESE
 [zh]
+  languageCode = "zh-cn"
   contentDir = "content/zh"
   languageName = "中文"
   weight = 7
@@ -172,6 +179,7 @@
 
 # 🇹🇷 TURKISH
 [tr]
+  languageCode = "tr-tr"
   contentDir = "content/tr"
   languageName = "Türkçe"
   weight = 8
@@ -196,6 +204,7 @@
 
 # 🇮🇪 IRISH
 [ga]
+  languageCode = "ga-ie"
   contentDir = "content/ga"
   languageName = "Gaeilge"
   weight = 9
@@ -217,4 +226,3 @@
     name = "Teagmháil"
     pageRef = "/contact"
     weight = 40
-    
