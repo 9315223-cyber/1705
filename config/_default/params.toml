@@ -1,27 +1,23 @@
 # =====================================================================
-# CONGO ENTERPRISE — VISUAL ENGINE & UI CONFIG (Lighthouse 100/100)
+# CONGO ENTERPRISE — VISUAL ENGINE & UI CONFIG
 # =====================================================================
 
 [params]
   color = "blue"
   font = "sans"
-  showLanguageChooser = true
-  showSearch = true
-  # homepage = "posts" # ПРИМІТКА: Виводить на головну сторінку статті з папки /posts/ ЯКЩО ХОЧЕШ??? 
   
-  [params.header]
-    layout = "basic"              # ДОДАНО: Стандартний макет шапки для коректного виводу кнопок
-    showLanguageChooser = true
-    showSearch = true
-    logo = "logo.png"             # ПРИМІТКА: Використовується в head.html для мікророзмітки логотипу
+  # ЦІ РЯДКИ ВІДПОВІДАЮТЬ ЗА ВІДОБРАЖЕННЯ У ШАПЦІ:
+  showSearch = true
+  showLanguageSwitcher = true
+  showThemeToggle = true
 
   [params.footer]
     showCopyright = true
-    showPoweredBy = false         # ПРИМІТКА: Ховаємо зайві посилання, покращуємо SEO-вагу
+    showPoweredBy = false
     showRSS = true
 
   [params.meta]
-    robots = "index, follow"      # ПРИМІТКА: Дозволяє індексацію на додаток до robots.txt
+    robots = "index, follow"
 
   [params.social]
     github = "9315223-cyber"
@@ -29,9 +25,14 @@
     twitter = "marketing_hub"
 
   [params.images]
-    lazyLoading = true            # ПРИМІТКА: Забезпечує 100/100 балів Lighthouse (відкладене завантаження)
+    lazyLoading = true
     quality = 85
 
+[author]
+  name = "Congo Enterprise Team"
+  image = "profile.png"
+  headline = "Next-Gen Multilingual Marketing & AI Hub"
+  
 # =====================================================================
 # E-E-A-T ТА МІКРОРОЗМІТКА (ДЛЯ ШІ ТА SEO)
 # =====================================================================
